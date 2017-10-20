@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 #import "NormalCollectionViewCell.h"
+#import "ReusableView.h"
+#import <Masonry/Masonry.h>
 
-#define Iterm_Size 80
-#define MinHorizontalSpace 8
+#define Iterm_Size (self.view.bounds.size.width - 20 *2)/3.0
+#define MinHorizontalSpace 10
 #define MinVerticalSpace 15
 @interface ViewController ()<UICollectionViewDataSource>
 @property (nonatomic,strong) UICollectionView *myCollection;
@@ -40,6 +42,19 @@
     return cell;
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        ReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ReusableViewHeader" forIndexPath:indexPath];
+        header.tip = [NSString stringWithFormat:@"SectionHeader-%ld",indexPath.section];
+        return header;
+    }else{
+        ReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"ReusableViewFooter" forIndexPath:indexPath];
+        footer.tip = [NSString stringWithFormat:@"SectionFooter-%ld",indexPath.section];
+        return footer;
+    }
+}
+
 #pragma mark - Setter && Getter
 - (UICollectionView *)myCollection{
     if (!_myCollection) {
@@ -47,8 +62,12 @@
         layout.itemSize = CGSizeMake(Iterm_Size, Iterm_Size);
         layout.minimumLineSpacing = MinHorizontalSpace;
         layout.minimumInteritemSpacing = MinVerticalSpace;
+        layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 30);
+        layout.footerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 30);
         _myCollection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         [_myCollection registerClass:[NormalCollectionViewCell class] forCellWithReuseIdentifier:@"NormalCollectionViewCell"];
+        [_myCollection registerClass:[ReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ReusableViewHeader"];
+        [_myCollection registerClass:[ReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"ReusableViewFooter"];
         _myCollection.dataSource = self;
     }
     return _myCollection;
