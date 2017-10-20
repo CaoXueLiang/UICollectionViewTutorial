@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58A44E271F99A9650033B676 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A44E261F99A9650033B676 /* AppDelegate.m */; };
+		58A44E2A1F99A9650033B676 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A44E291F99A9650033B676 /* ViewController.m */; };
+		58A44E2F1F99A9650033B676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58A44E2E1F99A9650033B676 /* Assets.xcassets */; };
+		58A44E321F99A9650033B676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A44E301F99A9650033B676 /* LaunchScreen.storyboard */; };
+		58A44E351F99A9650033B676 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A44E341F99A9650033B676 /* main.m */; };
+		58A44E3F1F99A9650033B676 /* PinterestLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A44E3E1F99A9650033B676 /* PinterestLayoutTests.m */; };
+		58A44E4A1F99A9650033B676 /* PinterestLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A44E491F99A9650033B676 /* PinterestLayoutUITests.m */; };
+		58A44E5A1F99C9280033B676 /* PinterestLauout.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A44E591F99C9280033B676 /* PinterestLauout.m */; };
+		58A44E5D1F99CB5B0033B676 /* NormalPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A44E5C1F99CB5B0033B676 /* NormalPhotoCell.m */; };
+		58A44E7B1F99D6C80033B676 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A44E7A1F99D6C80033B676 /* PhotoModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58A44E3B1F99A9650033B676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58A44E1A1F99A9640033B676 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58A44E211F99A9650033B676;
+			remoteInfo = PinterestLayout;
+		};
+		58A44E461F99A9650033B676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58A44E1A1F99A9640033B676 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58A44E211F99A9650033B676;
+			remoteInfo = PinterestLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		58A44E221F99A9650033B676 /* PinterestLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinterestLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58A44E251F99A9650033B676 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		58A44E261F99A9650033B676 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		58A44E281F99A9650033B676 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		58A44E291F99A9650033B676 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		58A44E2E1F99A9650033B676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58A44E311F99A9650033B676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		58A44E331F99A9650033B676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58A44E341F99A9650033B676 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58A44E3A1F99A9650033B676 /* PinterestLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinterestLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58A44E3E1F99A9650033B676 /* PinterestLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinterestLayoutTests.m; sourceTree = "<group>"; };
+		58A44E401F99A9650033B676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58A44E451F99A9650033B676 /* PinterestLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinterestLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58A44E491F99A9650033B676 /* PinterestLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinterestLayoutUITests.m; sourceTree = "<group>"; };
+		58A44E4B1F99A9650033B676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58A44E581F99C9280033B676 /* PinterestLauout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinterestLauout.h; sourceTree = "<group>"; };
+		58A44E591F99C9280033B676 /* PinterestLauout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinterestLauout.m; sourceTree = "<group>"; };
+		58A44E5B1F99CB5B0033B676 /* NormalPhotoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalPhotoCell.h; sourceTree = "<group>"; };
+		58A44E5C1F99CB5B0033B676 /* NormalPhotoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalPhotoCell.m; sourceTree = "<group>"; };
+		58A44E601F99D3E20033B676 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		58A44E611F99D3E20033B676 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		58A44E621F99D3E20033B676 /* MASConstraint+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		58A44E631F99D3E20033B676 /* MASConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		58A44E641F99D3E20033B676 /* MASConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		58A44E651F99D3E20033B676 /* MASConstraintMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		58A44E661F99D3E20033B676 /* MASConstraintMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		58A44E671F99D3E20033B676 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		58A44E681F99D3E20033B676 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		58A44E691F99D3E20033B676 /* Masonry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		58A44E6A1F99D3E20033B676 /* MASUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		58A44E6B1F99D3E20033B676 /* MASViewAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		58A44E6C1F99D3E20033B676 /* MASViewAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		58A44E6D1F99D3E20033B676 /* MASViewConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		58A44E6E1F99D3E20033B676 /* MASViewConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		58A44E6F1F99D3E20033B676 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		58A44E701F99D3E20033B676 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		58A44E711F99D3E20033B676 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		58A44E721F99D3E20033B676 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		58A44E731F99D3E20033B676 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		58A44E741F99D3E20033B676 /* View+MASAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		58A44E751F99D3E20033B676 /* View+MASAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		58A44E761F99D3E20033B676 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		58A44E771F99D3E20033B676 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		58A44E781F99D3E20033B676 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		58A44E791F99D6C80033B676 /* PhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
+		58A44E7A1F99D6C80033B676 /* PhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
+		58A44E7D1F99FDFE0033B676 /* Photos.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Photos.plist; path = ../../../Downloads/Final_Project/Pinterest/Assets/Photos.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58A44E1F1F99A9650033B676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58A44E371F99A9650033B676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58A44E421F99A9650033B676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58A44E191F99A9640033B676 = {
+			isa = PBXGroup;
+			children = (
+				58A44E241F99A9650033B676 /* PinterestLayout */,
+				58A44E3D1F99A9650033B676 /* PinterestLayoutTests */,
+				58A44E481F99A9650033B676 /* PinterestLayoutUITests */,
+				58A44E231F99A9650033B676 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58A44E231F99A9650033B676 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58A44E221F99A9650033B676 /* PinterestLayout.app */,
+				58A44E3A1F99A9650033B676 /* PinterestLayoutTests.xctest */,
+				58A44E451F99A9650033B676 /* PinterestLayoutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58A44E241F99A9650033B676 /* PinterestLayout */ = {
+			isa = PBXGroup;
+			children = (
+				58A44E5E1F99D3E20033B676 /* Masonry */,
+				58A44E571F99AB190033B676 /* class */,
+				58A44E251F99A9650033B676 /* AppDelegate.h */,
+				58A44E261F99A9650033B676 /* AppDelegate.m */,
+				58A44E281F99A9650033B676 /* ViewController.h */,
+				58A44E291F99A9650033B676 /* ViewController.m */,
+				58A44E2E1F99A9650033B676 /* Assets.xcassets */,
+				58A44E301F99A9650033B676 /* LaunchScreen.storyboard */,
+				58A44E331F99A9650033B676 /* Info.plist */,
+				58A44E7D1F99FDFE0033B676 /* Photos.plist */,
+				58A44E341F99A9650033B676 /* main.m */,
+			);
+			path = PinterestLayout;
+			sourceTree = "<group>";
+		};
+		58A44E3D1F99A9650033B676 /* PinterestLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				58A44E3E1F99A9650033B676 /* PinterestLayoutTests.m */,
+				58A44E401F99A9650033B676 /* Info.plist */,
+			);
+			path = PinterestLayoutTests;
+			sourceTree = "<group>";
+		};
+		58A44E481F99A9650033B676 /* PinterestLayoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				58A44E491F99A9650033B676 /* PinterestLayoutUITests.m */,
+				58A44E4B1F99A9650033B676 /* Info.plist */,
+			);
+			path = PinterestLayoutUITests;
+			sourceTree = "<group>";
+		};
+		58A44E571F99AB190033B676 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				58A44E791F99D6C80033B676 /* PhotoModel.h */,
+				58A44E7A1F99D6C80033B676 /* PhotoModel.m */,
+				58A44E5B1F99CB5B0033B676 /* NormalPhotoCell.h */,
+				58A44E5C1F99CB5B0033B676 /* NormalPhotoCell.m */,
+				58A44E581F99C9280033B676 /* PinterestLauout.h */,
+				58A44E591F99C9280033B676 /* PinterestLauout.m */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		58A44E5E1F99D3E20033B676 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				58A44E601F99D3E20033B676 /* MASCompositeConstraint.h */,
+				58A44E611F99D3E20033B676 /* MASCompositeConstraint.m */,
+				58A44E621F99D3E20033B676 /* MASConstraint+Private.h */,
+				58A44E631F99D3E20033B676 /* MASConstraint.h */,
+				58A44E641F99D3E20033B676 /* MASConstraint.m */,
+				58A44E651F99D3E20033B676 /* MASConstraintMaker.h */,
+				58A44E661F99D3E20033B676 /* MASConstraintMaker.m */,
+				58A44E671F99D3E20033B676 /* MASLayoutConstraint.h */,
+				58A44E681F99D3E20033B676 /* MASLayoutConstraint.m */,
+				58A44E691F99D3E20033B676 /* Masonry.h */,
+				58A44E6A1F99D3E20033B676 /* MASUtilities.h */,
+				58A44E6B1F99D3E20033B676 /* MASViewAttribute.h */,
+				58A44E6C1F99D3E20033B676 /* MASViewAttribute.m */,
+				58A44E6D1F99D3E20033B676 /* MASViewConstraint.h */,
+				58A44E6E1F99D3E20033B676 /* MASViewConstraint.m */,
+				58A44E6F1F99D3E20033B676 /* NSArray+MASAdditions.h */,
+				58A44E701F99D3E20033B676 /* NSArray+MASAdditions.m */,
+				58A44E711F99D3E20033B676 /* NSArray+MASShorthandAdditions.h */,
+				58A44E721F99D3E20033B676 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				58A44E731F99D3E20033B676 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				58A44E741F99D3E20033B676 /* View+MASAdditions.h */,
+				58A44E751F99D3E20033B676 /* View+MASAdditions.m */,
+				58A44E761F99D3E20033B676 /* View+MASShorthandAdditions.h */,
+				58A44E771F99D3E20033B676 /* ViewController+MASAdditions.h */,
+				58A44E781F99D3E20033B676 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58A44E211F99A9650033B676 /* PinterestLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58A44E4E1F99A9650033B676 /* Build configuration list for PBXNativeTarget "PinterestLayout" */;
+			buildPhases = (
+				58A44E1E1F99A9650033B676 /* Sources */,
+				58A44E1F1F99A9650033B676 /* Frameworks */,
+				58A44E201F99A9650033B676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PinterestLayout;
+			productName = PinterestLayout;
+			productReference = 58A44E221F99A9650033B676 /* PinterestLayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58A44E391F99A9650033B676 /* PinterestLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58A44E511F99A9650033B676 /* Build configuration list for PBXNativeTarget "PinterestLayoutTests" */;
+			buildPhases = (
+				58A44E361F99A9650033B676 /* Sources */,
+				58A44E371F99A9650033B676 /* Frameworks */,
+				58A44E381F99A9650033B676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58A44E3C1F99A9650033B676 /* PBXTargetDependency */,
+			);
+			name = PinterestLayoutTests;
+			productName = PinterestLayoutTests;
+			productReference = 58A44E3A1F99A9650033B676 /* PinterestLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		58A44E441F99A9650033B676 /* PinterestLayoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58A44E541F99A9650033B676 /* Build configuration list for PBXNativeTarget "PinterestLayoutUITests" */;
+			buildPhases = (
+				58A44E411F99A9650033B676 /* Sources */,
+				58A44E421F99A9650033B676 /* Frameworks */,
+				58A44E431F99A9650033B676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58A44E471F99A9650033B676 /* PBXTargetDependency */,
+			);
+			name = PinterestLayoutUITests;
+			productName = PinterestLayoutUITests;
+			productReference = 58A44E451F99A9650033B676 /* PinterestLayoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58A44E1A1F99A9640033B676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = CaoXueLiang.cn;
+				TargetAttributes = {
+					58A44E211F99A9650033B676 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					58A44E391F99A9650033B676 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 58A44E211F99A9650033B676;
+					};
+					58A44E441F99A9650033B676 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 58A44E211F99A9650033B676;
+					};
+				};
+			};
+			buildConfigurationList = 58A44E1D1F99A9640033B676 /* Build configuration list for PBXProject "PinterestLayout" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58A44E191F99A9640033B676;
+			productRefGroup = 58A44E231F99A9650033B676 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58A44E211F99A9650033B676 /* PinterestLayout */,
+				58A44E391F99A9650033B676 /* PinterestLayoutTests */,
+				58A44E441F99A9650033B676 /* PinterestLayoutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58A44E201F99A9650033B676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A44E321F99A9650033B676 /* LaunchScreen.storyboard in Resources */,
+				58A44E2F1F99A9650033B676 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58A44E381F99A9650033B676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58A44E431F99A9650033B676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58A44E1E1F99A9650033B676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A44E5A1F99C9280033B676 /* PinterestLauout.m in Sources */,
+				58A44E5D1F99CB5B0033B676 /* NormalPhotoCell.m in Sources */,
+				58A44E7B1F99D6C80033B676 /* PhotoModel.m in Sources */,
+				58A44E2A1F99A9650033B676 /* ViewController.m in Sources */,
+				58A44E351F99A9650033B676 /* main.m in Sources */,
+				58A44E271F99A9650033B676 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58A44E361F99A9650033B676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A44E3F1F99A9650033B676 /* PinterestLayoutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58A44E411F99A9650033B676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A44E4A1F99A9650033B676 /* PinterestLayoutUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58A44E3C1F99A9650033B676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58A44E211F99A9650033B676 /* PinterestLayout */;
+			targetProxy = 58A44E3B1F99A9650033B676 /* PBXContainerItemProxy */;
+		};
+		58A44E471F99A9650033B676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58A44E211F99A9650033B676 /* PinterestLayout */;
+			targetProxy = 58A44E461F99A9650033B676 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		58A44E301F99A9650033B676 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58A44E311F99A9650033B676 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58A44E4C1F99A9650033B676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58A44E4D1F99A9650033B676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58A44E4F1F99A9650033B676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
+				INFOPLIST_FILE = PinterestLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CaoXueliang.PinterestLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58A44E501F99A9650033B676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
+				INFOPLIST_FILE = PinterestLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CaoXueliang.PinterestLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		58A44E521F99A9650033B676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
+				INFOPLIST_FILE = PinterestLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CaoXueliang.PinterestLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PinterestLayout.app/PinterestLayout";
+			};
+			name = Debug;
+		};
+		58A44E531F99A9650033B676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
+				INFOPLIST_FILE = PinterestLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CaoXueliang.PinterestLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PinterestLayout.app/PinterestLayout";
+			};
+			name = Release;
+		};
+		58A44E551F99A9650033B676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
+				INFOPLIST_FILE = PinterestLayoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CaoXueliang.PinterestLayoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PinterestLayout;
+			};
+			name = Debug;
+		};
+		58A44E561F99A9650033B676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
+				INFOPLIST_FILE = PinterestLayoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CaoXueliang.PinterestLayoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PinterestLayout;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58A44E1D1F99A9640033B676 /* Build configuration list for PBXProject "PinterestLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A44E4C1F99A9650033B676 /* Debug */,
+				58A44E4D1F99A9650033B676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58A44E4E1F99A9650033B676 /* Build configuration list for PBXNativeTarget "PinterestLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A44E4F1F99A9650033B676 /* Debug */,
+				58A44E501F99A9650033B676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58A44E511F99A9650033B676 /* Build configuration list for PBXNativeTarget "PinterestLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A44E521F99A9650033B676 /* Debug */,
+				58A44E531F99A9650033B676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58A44E541F99A9650033B676 /* Build configuration list for PBXNativeTarget "PinterestLayoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A44E551F99A9650033B676 /* Debug */,
+				58A44E561F99A9650033B676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58A44E1A1F99A9640033B676 /* Project object */;
+}
