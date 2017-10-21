@@ -11,77 +11,107 @@
 @interface PinterestLauout()
 /*一共有几列*/
 @property (nonatomic,assign) NSInteger numberOfColumns;
-/*iterm间距*/
-@property (nonatomic,assign) CGFloat cellPading;
-/*collectionContent总高度*/
-@property (nonatomic,assign) CGFloat contentHeight;
-/*collectionContent宽度*/
-@property (nonatomic,assign) CGFloat contentWidth;
-/*缓存属性数组*/
-@property (nonatomic,strong) NSMutableArray<UICollectionViewLayoutAttributes*> *cacheArray;
+/*sectionInset*/
+@property (nonatomic,assign) UIEdgeInsets sectionInset;
+/*列间距*/
+@property (nonatomic,assign) CGFloat minColumnSpacing;
+/*行间距*/
+@property (nonatomic,assign) CGFloat minInteritemSpacing;
+/*存储每一列的高度*/
+@property (nonatomic,strong) NSMutableArray *columnHeightsArray;
+/*所有iterm的frame*/
+@property (nonatomic,strong) NSMutableArray *unionRectsArray;
+/*所有Collectioncell的属性数组*/
+@property (nonatomic,strong) NSMutableArray *allItermAttributesArray;
 @end
 
 @implementation PinterestLauout
+#pragma mark - Init
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        _numberOfColumns = 2;
+        _minColumnSpacing = 10;
+        _minInteritemSpacing = 10;
+        _sectionInset = UIEdgeInsetsMake(10, 20, 10, 20);
+    }
+    return self;
+}
+
 #pragma mark - override Menthod
 - (void)prepareLayout{
     [super prepareLayout];
-    self.numberOfColumns = 2.0;
-    self.cellPading = 6.0;
-    self.contentHeight = 0;
-    UIEdgeInsets insets = self.collectionView.contentInset;
-    self.contentWidth = self.collectionView.bounds.size.width - (insets.left + insets.right);
     
-    CGFloat columnWidth = self.contentWidth / self.numberOfColumns;
-    if (!self.cacheArray) {
-        self.cacheArray = [[NSMutableArray alloc]init];
-    }
+    //将数组清空
+    [self.columnHeightsArray removeAllObjects];
+    [self.unionRectsArray removeAllObjects];
+    [self.allItermAttributesArray removeAllObjects];
     
-    //每个cell初始的X轴和Y轴坐标
-    NSMutableArray *xOffset = [[NSMutableArray alloc]init];
-    NSMutableArray *yOffSet = [[NSMutableArray alloc]init];
-    for (int i = 0; i < self.numberOfColumns; i++) {
-        [xOffset addObject:[NSNumber numberWithFloat:i*columnWidth]];
-        [yOffSet addObject:[NSNumber numberWithFloat:0]];
-    }
-    
-    NSInteger column = 0;
-    NSInteger itermNum = [self.collectionView numberOfItemsInSection:0];
-    for (int i = 0; i < itermNum; i++) {
-        NSIndexPath *path = [NSIndexPath indexPathForRow:i inSection:0];
-        CGFloat photoHeight = [self.delegate heightForPhotoAtIndexPath:path];
-        CGFloat height = self.cellPading *2 + photoHeight;
-        CGRect frame = CGRectMake([xOffset[column] floatValue], [yOffSet[column] floatValue], columnWidth, height);
-        CGRect insetFrame = CGRectInset(frame, _cellPading, _cellPading);
+    CGFloat width = self.collectionView.bounds.size.width - _sectionInset.left - _sectionInset.right;
+    CGFloat itermWidth = (width - (_numberOfColumns - 1) *_minColumnSpacing) / _numberOfColumns;
+    NSInteger numberOfIterm = [self.collectionView numberOfItemsInSection:0];
+    for (int i = 0; i < numberOfIterm; i++) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
+        NSUInteger columnIndex = numberOfIterm % _numberOfColumns;
+        CGFloat offSetX = _sectionInset.left + columnIndex * (itermWidth + _minColumnSpacing);
+        CGFloat offSetY = 2;
+        CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
+        CGFloat itermHeight = 0;
+        if (itemSize.width > 0 && itemSize.height > 0) {
+            itermHeight = itemSize.height *itermWidth / itemSize.width;
+        }
         
-        //创建UICollectionViewLayoutAttributes
-        UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:path];
-        attributes.frame = insetFrame;
-        [self.cacheArray addObject:attributes];
-        
-        //更新UICollectionView的contentHeight
-        self.contentHeight = MAX(self.contentHeight, CGRectGetMaxY(frame));
-        yOffSet[column] = [NSNumber numberWithFloat:[yOffSet[column] floatValue] + height];
-        column = column < self.numberOfColumns - 1 ? column + 1 : 0;
+        //将所有铺的ItermAttribute保存下来
+        UICollectionViewLayoutAttributes *attributes =[UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+        attributes.frame = CGRectMake(offSetX, offSetY, itermWidth, itermHeight);
+        [self.allItermAttributesArray addObject:attributes];
+//        self.columnHeightsArray
+//        self.columnHeightsArray[columnIndex] = @(CGRectGetMaxX(attributes.frame) + _minInteritemSpacing);
     }
 }
 
 - (CGSize)collectionViewContentSize{
-    return CGSizeMake(self.contentWidth, self.contentHeight);
+    CGSize contentSize = self.collectionView.bounds.size;
+    contentSize.height = [self.columnHeightsArray.lastObject floatValue];
+    return contentSize;
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
-    NSMutableArray *array = [[NSMutableArray alloc]init];
-    for (UICollectionViewLayoutAttributes *attributes in self.cacheArray) {
-        //只对可视区域进行布局
-        if (CGRectEqualToRect(attributes.frame, rect)) {
-            [array addObject:attributes];
-        }
-    }
-    return array;
+    return self.allItermAttributesArray;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return self.cacheArray[indexPath.item];
+    return self.allItermAttributesArray[indexPath.item];
+}
+
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
+    CGRect oldBounds = self.collectionView.bounds;
+    if (CGRectGetWidth(newBounds) != CGRectGetWidth(oldBounds)) {
+        return YES;
+    }
+    return NO;
+}
+
+#pragma mark - Setter && Getter
+- (NSMutableArray *)columnHeightsArray{
+    if (!_columnHeightsArray) {
+        _columnHeightsArray = [[NSMutableArray alloc]init];
+    }
+    return _columnHeightsArray;
+}
+
+- (NSMutableArray *)unionRectsArray{
+    if (!_unionRectsArray) {
+        _unionRectsArray = [[NSMutableArray alloc]init];
+    }
+    return _unionRectsArray;
+}
+
+- (NSMutableArray *)allItermAttributesArray{
+    if (!_allItermAttributesArray) {
+        _allItermAttributesArray = [[NSMutableArray alloc]init];
+    }
+    return _allItermAttributesArray;
 }
 
 @end

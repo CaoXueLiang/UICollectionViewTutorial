@@ -46,11 +46,13 @@
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         ReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ReusableViewHeader" forIndexPath:indexPath];
-        header.tip = [NSString stringWithFormat:@"SectionHeader-%ld",indexPath.section];
+        header.tip = [NSString stringWithFormat:@"Header"];
+        header.backgroundColor = [UIColor purpleColor];
         return header;
     }else{
         ReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"ReusableViewFooter" forIndexPath:indexPath];
-        footer.tip = [NSString stringWithFormat:@"SectionFooter-%ld",indexPath.section];
+        footer.tip = [NSString stringWithFormat:@"Footer"];
+        footer.backgroundColor = [UIColor purpleColor];
         return footer;
     }
 }

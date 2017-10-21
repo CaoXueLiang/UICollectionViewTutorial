@@ -37,17 +37,16 @@
     return cell;
 }
 
-- (CGFloat)heightForPhotoAtIndexPath:(NSIndexPath *)path{
-    PhotoModel *model = self.dataArray[path.item];
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    PhotoModel *model = self.dataArray[indexPath.item];
     UIImage *tmpImage = [UIImage imageNamed:model.imageName];
-    return tmpImage.size.height;
+    return tmpImage.size;
 }
 
 #pragma mark - Setter && Getter
 - (UICollectionView *)myCollection{
     if (!_myCollection) {
         PinterestLauout *layout = [[PinterestLauout alloc]init];
-        layout.delegate = self;
         _myCollection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         [_myCollection registerClass:[NormalPhotoCell class] forCellWithReuseIdentifier:@"NormalPhotoCell"];
         _myCollection.dataSource = self;
@@ -63,6 +62,38 @@
                                  @"Caption" : @"VCON?",
                                  @"Comment" : @"Is Ray hinting that perhaps it's Vicki's turn next year?",
                                   },
+                              @{ @"Photo" : @"02",
+                                 @"Caption" : @"VCON?",
+                                 @"Comment" : @"Is Ray hinting that perhaps it's Vicki's turn next year?",
+                                 },
+                              @{ @"Photo" : @"03",
+                                 @"Caption" : @"VCON?",
+                                 @"Comment" : @"Is Ray hinting that perhaps it's Vicki's turn next year?",
+                                 },
+                              @{ @"Photo" : @"04",
+                                 @"Caption" : @"VCON?",
+                                 @"Comment" : @"Is Ray hinting that perhaps it's Vicki's turn next year?",
+                                 },
+                              @{ @"Photo" : @"05",
+                                 @"Caption" : @"VCON?",
+                                 @"Comment" : @"Is Ray hinting that perhaps it's Vicki's turn next year?",
+                                 },
+                              @{ @"Photo" : @"06",
+                                 @"Caption" : @"VCON?",
+                                 @"Comment" : @"Is Ray hinting that perhaps it's Vicki's turn next year?",
+                                 },
+                              @{ @"Photo" : @"07",
+                                 @"Caption" : @"VCON?",
+                                 @"Comment" : @"Is Ray hinting that perhaps it's Vicki's turn next year?",
+                                 },
+                              @{ @"Photo" : @"08",
+                                 @"Caption" : @"VCON?",
+                                 @"Comment" : @"Is Ray hinting that perhaps it's Vicki's turn next year?",
+                                 },
+                              @{ @"Photo" : @"09",
+                                 @"Caption" : @"VCON?",
+                                 @"Comment" : @"Is Ray hinting that perhaps it's Vicki's turn next year?",
+                                 },
                               ];
         [tmpArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSDictionary *tmp = obj;

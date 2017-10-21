@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol PinterestLauoutDelegate <NSObject>
-- (CGFloat)heightForPhotoAtIndexPath:(NSIndexPath *)path;
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @interface PinterestLauout : UICollectionViewLayout
