@@ -45,6 +45,7 @@
     CHTCollectionViewWaterfallLayout *layout =
     (CHTCollectionViewWaterfallLayout *)self.collectionView.collectionViewLayout;
     layout.columnCount = UIInterfaceOrientationIsPortrait(orientation) ? 2 : 3;
+    [self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -88,12 +89,12 @@
     if (!_collectionView) {
         CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc]init];
         layout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
-        layout.headerHeight = 25;
-        layout.footerHeight = 25;
+        layout.headerHeight = 35;
+        layout.footerHeight = 35;
         layout.minimumColumnSpacing = 10;
         layout.minimumInteritemSpacing = 10;
         _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-        _collectionView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        _collectionView.backgroundColor = [UIColor colorWithRed:210/255.0 green:210/255.0 blue:210/255.0 alpha:1];
         _collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [_collectionView registerClass:[NormalCollectionViewCell class] forCellWithReuseIdentifier:@"NormalCollectionViewCell"];
         [_collectionView registerClass:[CollectionHeaderFooter class] forSupplementaryViewOfKind:CHTCollectionElementKindSectionHeader withReuseIdentifier:@"header"];
@@ -108,8 +109,14 @@
     if (!_dataArray) {
         _dataArray = [[NSMutableArray alloc]init];
         for (int i = 1; i < 14; i++) {
+            NSMutableString *string = [[NSMutableString alloc]init];
             PhotoModel *model = [[PhotoModel alloc]init];
             model.imageName = [NSString stringWithFormat:@"%d",i];
+            model.title = @"标题";
+            for (int n = 0; n < i; n++) {
+                [string appendString:@"测试测试"];
+            }
+            model.detail = string;
             [_dataArray addObject:model];
         }
     }

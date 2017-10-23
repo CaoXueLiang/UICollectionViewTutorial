@@ -10,8 +10,9 @@
 #import <Masonry/Masonry.h>
 #import "PhotoModel.h"
 #import "CHTCollectionViewWaterfallLayout.h"
+#import <YYCategories/YYCategories.h>
 
-#define LabelHeight 20
+#define LabelHeight 25
 @interface NormalCollectionViewCell()
 @property (nonatomic,strong) UIImageView *topImageView;
 @property (nonatomic,strong) UILabel *titleLabel;
@@ -39,16 +40,18 @@
     
     [self.contentView addSubview:self.titleLabel];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.contentView);
+        make.left.equalTo(self.contentView).offset(5);
+        make.right.equalTo(self.contentView).offset(-5);
         make.top.equalTo(self.topImageView.mas_bottom);
         make.height.mas_equalTo(LabelHeight);
     }];
     
     [self.contentView addSubview:self.detailLabel];
     [self.detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.contentView);
+        make.left.equalTo(self.contentView).offset(5);
+        make.right.equalTo(self.contentView).offset(-5);
         make.top.equalTo(self.titleLabel.mas_bottom);
-        make.height.mas_equalTo(LabelHeight);
+        //make.bottom.equalTo(self.contentView).offset(-8);
     }];
 }
 
@@ -59,12 +62,10 @@
     }
     UIImage *image = [UIImage imageNamed:model.imageName];
     self.topImageView.image = image;
-    self.titleLabel.text = @"标题";
-    self.detailLabel.text = @"detaildetaildetail";
-    
-    UIInterfaceOrientation Orientation = [UIApplication sharedApplication].statusBarOrientation;
+    self.titleLabel.text = model.title;
+    self.detailLabel.text = model.detail;
     CHTCollectionViewWaterfallLayout *currentLayout = (CHTCollectionViewWaterfallLayout *)layout;
-    CGFloat width = Orientation == UIInterfaceOrientationPortrait ? [UIScreen mainScreen].bounds.size.width : [UIScreen mainScreen].bounds.size.height;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat cellWidth = (width - (currentLayout.columnCount - 1) *currentLayout.minimumColumnSpacing - currentLayout.sectionInset.left - currentLayout.sectionInset.right)/currentLayout.columnCount;
     CGFloat cellHeight = cellWidth * (image.size.height/image.size.width);
     
@@ -75,12 +76,12 @@
 }
 
 + (CGSize)sizeWithModel:(PhotoModel*)model layout:(UICollectionViewLayout *)layout{
-    UIInterfaceOrientation Orientation = [UIApplication sharedApplication].statusBarOrientation;
     CHTCollectionViewWaterfallLayout *currentLayout = (CHTCollectionViewWaterfallLayout *)layout;
-    CGFloat width = Orientation == UIInterfaceOrientationPortrait ? [UIScreen mainScreen].bounds.size.width : [UIScreen mainScreen].bounds.size.height;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat cellWidth = (width - (currentLayout.columnCount - 1) *currentLayout.minimumColumnSpacing - currentLayout.sectionInset.left - currentLayout.sectionInset.right)/currentLayout.columnCount;
     UIImage *image = [UIImage imageNamed:model.imageName];
-    CGFloat cellHeight = cellWidth * (image.size.height/image.size.width) + LabelHeight*2;
+    CGFloat imageHeight = cellWidth * (image.size.height/image.size.width);
+    CGFloat cellHeight = imageHeight + LabelHeight + 8 + [model.detail heightForFont:[UIFont systemFontOfSize:13] width:cellWidth - 10.0];
     return CGSizeMake(cellWidth, cellHeight);
 }
 
@@ -99,7 +100,6 @@
         _titleLabel = [UILabel new];
         _titleLabel.textColor = [UIColor blackColor];
         _titleLabel.font = [UIFont systemFontOfSize:15];
-        _titleLabel.numberOfLines = 0;
     }
     return _titleLabel;
 }
@@ -107,7 +107,7 @@
 - (UILabel *)detailLabel{
     if (!_detailLabel) {
         _detailLabel = [UILabel new];
-        _detailLabel.font = [UIFont systemFontOfSize:12];
+        _detailLabel.font = [UIFont systemFontOfSize:13];
         _detailLabel.textColor = [UIColor grayColor];
         _detailLabel.numberOfLines = 0;
     }
