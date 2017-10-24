@@ -21,6 +21,10 @@
 @end
 
 @implementation WheelLayout
+/*
+ 使用自定义的WheelCollectionLayoutAttributes
+ 不用系统自带的UICollectionViewLayoutAttributes
+ */
 + (Class)layoutAttributesClass{
     return [WheelCollectionLayoutAttributes class];
 }
@@ -47,12 +51,11 @@
     }
     CGFloat angleAtExtreme = (numberOfItem - 1) * self.anglePerItem;
     CGFloat angle = -angleAtExtreme * self.collectionView.contentOffset.x / (self.collectionView.contentSize.width - CGRectGetWidth(self.collectionView.bounds));
-    NSLog(@"---%f---",self.collectionView.contentOffset.x);
+    //NSLog(@"---%f---",self.collectionView.contentOffset.x);
 
     for (int i = 0; i < numberOfItem; i++) {
         CGFloat centerX = self.collectionView.contentOffset.x + CGRectGetWidth(self.collectionView.bounds)/2.0;
         CGFloat anchorPointY = (self.itermSize.height/2.0 + self.radius) / self.itermSize.height;
-        
         WheelCollectionLayoutAttributes *attribute = [WheelCollectionLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
         attribute.anchorPoint = CGPointMake(0.5, anchorPointY);
         attribute.size = self.itermSize;

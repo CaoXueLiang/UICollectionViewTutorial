@@ -43,7 +43,7 @@
         WheelLayout *layout = [[WheelLayout alloc]init];
         _myCollection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         [_myCollection registerClass:[NormalCollectionViewCell class] forCellWithReuseIdentifier:@"NormalCollectionViewCell"];
-        _myCollection.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        _myCollection.backgroundColor = [UIColor blackColor];
         _myCollection.dataSource = self;
     }
     return _myCollection;
@@ -60,4 +60,3 @@
 }
 
 @end
-

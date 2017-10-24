@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58BE5AC51F9F0D5800A8E9DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5AC41F9F0D5800A8E9DD /* AppDelegate.m */; };
+		58BE5ACD1F9F0D5800A8E9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58BE5ACC1F9F0D5800A8E9DD /* Assets.xcassets */; };
+		58BE5AD01F9F0D5800A8E9DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58BE5ACE1F9F0D5800A8E9DD /* LaunchScreen.storyboard */; };
+		58BE5AD31F9F0D5800A8E9DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5AD21F9F0D5800A8E9DD /* main.m */; };
+		58BE5ADD1F9F0D5900A8E9DD /* OpenBookLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5ADC1F9F0D5900A8E9DD /* OpenBookLayoutTests.m */; };
+		58BE5AE81F9F0D5900A8E9DD /* OpenBookLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5AE71F9F0D5900A8E9DD /* OpenBookLayoutUITests.m */; };
+		58BE5AFA1F9F134400A8E9DD /* BookListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5AF91F9F134400A8E9DD /* BookListController.m */; };
+		58BE5AFD1F9F135600A8E9DD /* BookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5AFC1F9F135600A8E9DD /* BookDetailController.m */; };
+		58BE5B041F9F1EA900A8E9DD /* BookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5B031F9F1EA900A8E9DD /* BookCollectionViewCell.m */; };
+		58BE5B0B1F9F2B6200A8E9DD /* BookLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5B0A1F9F2B6200A8E9DD /* BookLayout.m */; };
+		58BE5B0E1F9F372400A8E9DD /* DetailCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5B0D1F9F372400A8E9DD /* DetailCollectionCell.m */; };
+		58BE5B111F9F378700A8E9DD /* BookFlippingLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5B101F9F378700A8E9DD /* BookFlippingLayout.m */; };
+		854BFAFCFB2AC42D1562595E /* libPods-OpenBookLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEBCD5FE121085D7216834 /* libPods-OpenBookLayout.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58BE5AD91F9F0D5900A8E9DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58BE5AB81F9F0D5800A8E9DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58BE5ABF1F9F0D5800A8E9DD;
+			remoteInfo = OpenBookLayout;
+		};
+		58BE5AE41F9F0D5900A8E9DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58BE5AB81F9F0D5800A8E9DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58BE5ABF1F9F0D5800A8E9DD;
+			remoteInfo = OpenBookLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03F53921539A11BB50100C66 /* Pods-OpenBookLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenBookLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenBookLayout/Pods-OpenBookLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		2E80AD80EEF49E02D8B1E41E /* Pods-OpenBookLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenBookLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenBookLayout/Pods-OpenBookLayout.release.xcconfig"; sourceTree = "<group>"; };
+		58BE5AC01F9F0D5800A8E9DD /* OpenBookLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenBookLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58BE5AC31F9F0D5800A8E9DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		58BE5AC41F9F0D5800A8E9DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		58BE5ACC1F9F0D5800A8E9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58BE5ACF1F9F0D5800A8E9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		58BE5AD11F9F0D5800A8E9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58BE5AD21F9F0D5800A8E9DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58BE5AD81F9F0D5900A8E9DD /* OpenBookLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenBookLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58BE5ADC1F9F0D5900A8E9DD /* OpenBookLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenBookLayoutTests.m; sourceTree = "<group>"; };
+		58BE5ADE1F9F0D5900A8E9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58BE5AE31F9F0D5900A8E9DD /* OpenBookLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenBookLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58BE5AE71F9F0D5900A8E9DD /* OpenBookLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenBookLayoutUITests.m; sourceTree = "<group>"; };
+		58BE5AE91F9F0D5900A8E9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58BE5AF81F9F134400A8E9DD /* BookListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookListController.h; sourceTree = "<group>"; };
+		58BE5AF91F9F134400A8E9DD /* BookListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookListController.m; sourceTree = "<group>"; };
+		58BE5AFB1F9F135600A8E9DD /* BookDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookDetailController.h; sourceTree = "<group>"; };
+		58BE5AFC1F9F135600A8E9DD /* BookDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookDetailController.m; sourceTree = "<group>"; };
+		58BE5B021F9F1EA900A8E9DD /* BookCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookCollectionViewCell.h; sourceTree = "<group>"; };
+		58BE5B031F9F1EA900A8E9DD /* BookCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookCollectionViewCell.m; sourceTree = "<group>"; };
+		58BE5B051F9F217800A8E9DD /* Books.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Books.plist; sourceTree = "<group>"; };
+		58BE5B091F9F2B6100A8E9DD /* BookLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookLayout.h; sourceTree = "<group>"; };
+		58BE5B0A1F9F2B6200A8E9DD /* BookLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookLayout.m; sourceTree = "<group>"; };
+		58BE5B0C1F9F372400A8E9DD /* DetailCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailCollectionCell.h; sourceTree = "<group>"; };
+		58BE5B0D1F9F372400A8E9DD /* DetailCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailCollectionCell.m; sourceTree = "<group>"; };
+		58BE5B0F1F9F378700A8E9DD /* BookFlippingLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookFlippingLayout.h; sourceTree = "<group>"; };
+		58BE5B101F9F378700A8E9DD /* BookFlippingLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookFlippingLayout.m; sourceTree = "<group>"; };
+		FDDEBCD5FE121085D7216834 /* libPods-OpenBookLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OpenBookLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58BE5ABD1F9F0D5800A8E9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854BFAFCFB2AC42D1562595E /* libPods-OpenBookLayout.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BE5AD51F9F0D5900A8E9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BE5AE01F9F0D5900A8E9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1253749D07D62E904FD72E94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDDEBCD5FE121085D7216834 /* libPods-OpenBookLayout.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58BE5AB71F9F0D5800A8E9DD = {
+			isa = PBXGroup;
+			children = (
+				58BE5AC21F9F0D5800A8E9DD /* OpenBookLayout */,
+				58BE5ADB1F9F0D5900A8E9DD /* OpenBookLayoutTests */,
+				58BE5AE61F9F0D5900A8E9DD /* OpenBookLayoutUITests */,
+				58BE5AC11F9F0D5800A8E9DD /* Products */,
+				FA2A84BAC6406B6D3403CE6E /* Pods */,
+				1253749D07D62E904FD72E94 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		58BE5AC11F9F0D5800A8E9DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58BE5AC01F9F0D5800A8E9DD /* OpenBookLayout.app */,
+				58BE5AD81F9F0D5900A8E9DD /* OpenBookLayoutTests.xctest */,
+				58BE5AE31F9F0D5900A8E9DD /* OpenBookLayoutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58BE5AC21F9F0D5800A8E9DD /* OpenBookLayout */ = {
+			isa = PBXGroup;
+			children = (
+				58BE5AFE1F9F149100A8E9DD /* CustomLayout */,
+				58BE5AF71F9F132800A8E9DD /* View */,
+				58BE5AF61F9F132300A8E9DD /* Model */,
+				58BE5AF51F9F131C00A8E9DD /* Controller */,
+				58BE5AC31F9F0D5800A8E9DD /* AppDelegate.h */,
+				58BE5AC41F9F0D5800A8E9DD /* AppDelegate.m */,
+				58BE5ACC1F9F0D5800A8E9DD /* Assets.xcassets */,
+				58BE5ACE1F9F0D5800A8E9DD /* LaunchScreen.storyboard */,
+				58BE5AD11F9F0D5800A8E9DD /* Info.plist */,
+				58BE5B051F9F217800A8E9DD /* Books.plist */,
+				58BE5AD21F9F0D5800A8E9DD /* main.m */,
+			);
+			path = OpenBookLayout;
+			sourceTree = "<group>";
+		};
+		58BE5ADB1F9F0D5900A8E9DD /* OpenBookLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				58BE5ADC1F9F0D5900A8E9DD /* OpenBookLayoutTests.m */,
+				58BE5ADE1F9F0D5900A8E9DD /* Info.plist */,
+			);
+			path = OpenBookLayoutTests;
+			sourceTree = "<group>";
+		};
+		58BE5AE61F9F0D5900A8E9DD /* OpenBookLayoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				58BE5AE71F9F0D5900A8E9DD /* OpenBookLayoutUITests.m */,
+				58BE5AE91F9F0D5900A8E9DD /* Info.plist */,
+			);
+			path = OpenBookLayoutUITests;
+			sourceTree = "<group>";
+		};
+		58BE5AF51F9F131C00A8E9DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				58BE5AF81F9F134400A8E9DD /* BookListController.h */,
+				58BE5AF91F9F134400A8E9DD /* BookListController.m */,
+				58BE5AFB1F9F135600A8E9DD /* BookDetailController.h */,
+				58BE5AFC1F9F135600A8E9DD /* BookDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		58BE5AF61F9F132300A8E9DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58BE5AF71F9F132800A8E9DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58BE5B021F9F1EA900A8E9DD /* BookCollectionViewCell.h */,
+				58BE5B031F9F1EA900A8E9DD /* BookCollectionViewCell.m */,
+				58BE5B0C1F9F372400A8E9DD /* DetailCollectionCell.h */,
+				58BE5B0D1F9F372400A8E9DD /* DetailCollectionCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58BE5AFE1F9F149100A8E9DD /* CustomLayout */ = {
+			isa = PBXGroup;
+			children = (
+				58BE5B091F9F2B6100A8E9DD /* BookLayout.h */,
+				58BE5B0A1F9F2B6200A8E9DD /* BookLayout.m */,
+				58BE5B0F1F9F378700A8E9DD /* BookFlippingLayout.h */,
+				58BE5B101F9F378700A8E9DD /* BookFlippingLayout.m */,
+			);
+			path = CustomLayout;
+			sourceTree = "<group>";
+		};
+		FA2A84BAC6406B6D3403CE6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03F53921539A11BB50100C66 /* Pods-OpenBookLayout.debug.xcconfig */,
+				2E80AD80EEF49E02D8B1E41E /* Pods-OpenBookLayout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58BE5ABF1F9F0D5800A8E9DD /* OpenBookLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58BE5AEC1F9F0D5900A8E9DD /* Build configuration list for PBXNativeTarget "OpenBookLayout" */;
+			buildPhases = (
+				24AE8BCC3F4E4EE0B3D19674 /* [CP] Check Pods Manifest.lock */,
+				58BE5ABC1F9F0D5800A8E9DD /* Sources */,
+				58BE5ABD1F9F0D5800A8E9DD /* Frameworks */,
+				58BE5ABE1F9F0D5800A8E9DD /* Resources */,
+				27A7B491BE1A0C150EA66B76 /* [CP] Embed Pods Frameworks */,
+				BD4F0DF6C055021D2183E0E6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenBookLayout;
+			productName = OpenBookLayout;
+			productReference = 58BE5AC01F9F0D5800A8E9DD /* OpenBookLayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58BE5AD71F9F0D5900A8E9DD /* OpenBookLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58BE5AEF1F9F0D5900A8E9DD /* Build configuration list for PBXNativeTarget "OpenBookLayoutTests" */;
+			buildPhases = (
+				58BE5AD41F9F0D5900A8E9DD /* Sources */,
+				58BE5AD51F9F0D5900A8E9DD /* Frameworks */,
+				58BE5AD61F9F0D5900A8E9DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58BE5ADA1F9F0D5900A8E9DD /* PBXTargetDependency */,
+			);
+			name = OpenBookLayoutTests;
+			productName = OpenBookLayoutTests;
+			productReference = 58BE5AD81F9F0D5900A8E9DD /* OpenBookLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		58BE5AE21F9F0D5900A8E9DD /* OpenBookLayoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58BE5AF21F9F0D5900A8E9DD /* Build configuration list for PBXNativeTarget "OpenBookLayoutUITests" */;
+			buildPhases = (
+				58BE5ADF1F9F0D5900A8E9DD /* Sources */,
+				58BE5AE01F9F0D5900A8E9DD /* Frameworks */,
+				58BE5AE11F9F0D5900A8E9DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58BE5AE51F9F0D5900A8E9DD /* PBXTargetDependency */,
+			);
+			name = OpenBookLayoutUITests;
+			productName = OpenBookLayoutUITests;
+			productReference = 58BE5AE31F9F0D5900A8E9DD /* OpenBookLayoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58BE5AB81F9F0D5800A8E9DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = caoxueliang.cn;
+				TargetAttributes = {
+					58BE5ABF1F9F0D5800A8E9DD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					58BE5AD71F9F0D5900A8E9DD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 58BE5ABF1F9F0D5800A8E9DD;
+					};
+					58BE5AE21F9F0D5900A8E9DD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 58BE5ABF1F9F0D5800A8E9DD;
+					};
+				};
+			};
+			buildConfigurationList = 58BE5ABB1F9F0D5800A8E9DD /* Build configuration list for PBXProject "OpenBookLayout" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58BE5AB71F9F0D5800A8E9DD;
+			productRefGroup = 58BE5AC11F9F0D5800A8E9DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58BE5ABF1F9F0D5800A8E9DD /* OpenBookLayout */,
+				58BE5AD71F9F0D5900A8E9DD /* OpenBookLayoutTests */,
+				58BE5AE21F9F0D5900A8E9DD /* OpenBookLayoutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58BE5ABE1F9F0D5800A8E9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BE5AD01F9F0D5800A8E9DD /* LaunchScreen.storyboard in Resources */,
+				58BE5ACD1F9F0D5800A8E9DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BE5AD61F9F0D5900A8E9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BE5AE11F9F0D5900A8E9DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24AE8BCC3F4E4EE0B3D19674 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		27A7B491BE1A0C150EA66B76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenBookLayout/Pods-OpenBookLayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD4F0DF6C055021D2183E0E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenBookLayout/Pods-OpenBookLayout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58BE5ABC1F9F0D5800A8E9DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BE5B0E1F9F372400A8E9DD /* DetailCollectionCell.m in Sources */,
+				58BE5B111F9F378700A8E9DD /* BookFlippingLayout.m in Sources */,
+				58BE5AFA1F9F134400A8E9DD /* BookListController.m in Sources */,
+				58BE5AD31F9F0D5800A8E9DD /* main.m in Sources */,
+				58BE5AC51F9F0D5800A8E9DD /* AppDelegate.m in Sources */,
+				58BE5AFD1F9F135600A8E9DD /* BookDetailController.m in Sources */,
+				58BE5B0B1F9F2B6200A8E9DD /* BookLayout.m in Sources */,
+				58BE5B041F9F1EA900A8E9DD /* BookCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BE5AD41F9F0D5900A8E9DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BE5ADD1F9F0D5900A8E9DD /* OpenBookLayoutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58BE5ADF1F9F0D5900A8E9DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BE5AE81F9F0D5900A8E9DD /* OpenBookLayoutUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58BE5ADA1F9F0D5900A8E9DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58BE5ABF1F9F0D5800A8E9DD /* OpenBookLayout */;
+			targetProxy = 58BE5AD91F9F0D5900A8E9DD /* PBXContainerItemProxy */;
+		};
+		58BE5AE51F9F0D5900A8E9DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58BE5ABF1F9F0D5800A8E9DD /* OpenBookLayout */;
+			targetProxy = 58BE5AE41F9F0D5900A8E9DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		58BE5ACE1F9F0D5800A8E9DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58BE5ACF1F9F0D5800A8E9DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58BE5AEA1F9F0D5900A8E9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58BE5AEB1F9F0D5900A8E9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58BE5AED1F9F0D5900A8E9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03F53921539A11BB50100C66 /* Pods-OpenBookLayout.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
+				INFOPLIST_FILE = OpenBookLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.OpenBookLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58BE5AEE1F9F0D5900A8E9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E80AD80EEF49E02D8B1E41E /* Pods-OpenBookLayout.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
+				INFOPLIST_FILE = OpenBookLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.OpenBookLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		58BE5AF01F9F0D5900A8E9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = OpenBookLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.OpenBookLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenBookLayout.app/OpenBookLayout";
+			};
+			name = Debug;
+		};
+		58BE5AF11F9F0D5900A8E9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = OpenBookLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.OpenBookLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenBookLayout.app/OpenBookLayout";
+			};
+			name = Release;
+		};
+		58BE5AF31F9F0D5900A8E9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = OpenBookLayoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.OpenBookLayoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpenBookLayout;
+			};
+			name = Debug;
+		};
+		58BE5AF41F9F0D5900A8E9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = OpenBookLayoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.OpenBookLayoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpenBookLayout;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58BE5ABB1F9F0D5800A8E9DD /* Build configuration list for PBXProject "OpenBookLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BE5AEA1F9F0D5900A8E9DD /* Debug */,
+				58BE5AEB1F9F0D5900A8E9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58BE5AEC1F9F0D5900A8E9DD /* Build configuration list for PBXNativeTarget "OpenBookLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BE5AED1F9F0D5900A8E9DD /* Debug */,
+				58BE5AEE1F9F0D5900A8E9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58BE5AEF1F9F0D5900A8E9DD /* Build configuration list for PBXNativeTarget "OpenBookLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BE5AF01F9F0D5900A8E9DD /* Debug */,
+				58BE5AF11F9F0D5900A8E9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58BE5AF21F9F0D5900A8E9DD /* Build configuration list for PBXNativeTarget "OpenBookLayoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BE5AF31F9F0D5900A8E9DD /* Debug */,
+				58BE5AF41F9F0D5900A8E9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58BE5AB81F9F0D5800A8E9DD /* Project object */;
+}

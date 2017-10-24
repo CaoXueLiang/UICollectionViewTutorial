@@ -26,7 +26,7 @@
 
 /*返回滚动停止的点，自动对齐到网格*/
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity{
-    //NSLog(@"%@",NSStringFromCGPoint(proposedContentOffset));
+    NSLog(@"%@",NSStringFromCGPoint(proposedContentOffset));
     //proposedContentOffset是没有对齐到网格时本来应该停下的位置
     CGFloat offsetAdjustment = MAXFLOAT;
     

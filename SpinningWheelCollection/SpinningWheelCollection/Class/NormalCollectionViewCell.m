@@ -30,7 +30,7 @@
 }
 
 /*
- 对于自定义的属性，anchorPoint必须手动实现这个方法
+ 对于自定义的属性anchorPoint，必须手动实现这个方法
  */
 - (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes{
     [super applyLayoutAttributes:layoutAttributes];
@@ -47,10 +47,9 @@
         _bookImageView = [[UIImageView alloc]init];
         _bookImageView.contentMode = UIViewContentModeScaleAspectFill;
         _bookImageView.layer.cornerRadius = 6;
-        _bookImageView.layer.borderColor = [UIColor blackColor].CGColor;
-        _bookImageView.layer.borderWidth = 1;
         _bookImageView.layer.masksToBounds = YES;
     }
     return _bookImageView;
 }
 @end
+
