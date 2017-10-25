@@ -10,8 +10,9 @@
 #import "BookCollectionViewCell.h"
 #import "BookLayout.h"
 #import "BookDetailController.h"
+#import "BookOpeningTransition.h"
 
-@interface BookListController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface BookListController ()<UICollectionViewDataSource,UICollectionViewDelegate,UINavigationControllerDelegate>
 @property (nonatomic,strong) UICollectionView *myCollection;
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @end
@@ -31,6 +32,11 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.navigationController.delegate = self;
+}
+
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.dataArray.count;
@@ -46,6 +52,17 @@
     NSString *imageName = self.dataArray[indexPath.item];
     BookDetailController *controller = [BookDetailController initWithImageName:imageName];
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+#pragma mark - UINavigationControllerDelegate
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                         fromViewController:(UIViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC{
+    if (operation == UINavigationControllerOperationPush) {
+        return [BookOpeningTransition initWithAnimationType:AnimationTypePush];
+    }else{
+        return nil;
+    }
 }
 
 #pragma mark - Setter && Getter
