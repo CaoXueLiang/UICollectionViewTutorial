@@ -30,6 +30,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.myCollection];
     self.myCollection.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 11.0){
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 110000
+        self.myCollection.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+#endif
+    }
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -49,7 +54,7 @@
         BookFlippingLayout *layout = [[BookFlippingLayout alloc]init];
         _myCollection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         [_myCollection registerClass:[DetailCollectionCell class] forCellWithReuseIdentifier:@"DetailCollectionCell"];
-        _myCollection.backgroundColor = [UIColor colorWithRed:67/255.0 green:71/255.0 blue:83/255.0 alpha:1];
+        _myCollection.backgroundColor = [UIColor colorWithRed:62/255.0 green:72/255.0 blue:84/255.0 alpha:1];
         _myCollection.dataSource = self;
     }
     return _myCollection;

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58B73ECB1FA06C0E004196E8 /* UIImage+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B73ECA1FA06C0E004196E8 /* UIImage+Helper.m */; };
+		58B73ED11FA09062004196E8 /* UIView+Cliper.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B73ED01FA09062004196E8 /* UIView+Cliper.m */; };
+		58B73ED51FA0976C004196E8 /* BookOpeningTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B73ED41FA0976C004196E8 /* BookOpeningTransition.m */; };
 		58BE5AC51F9F0D5800A8E9DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE5AC41F9F0D5800A8E9DD /* AppDelegate.m */; };
 		58BE5ACD1F9F0D5800A8E9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58BE5ACC1F9F0D5800A8E9DD /* Assets.xcassets */; };
 		58BE5AD01F9F0D5800A8E9DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58BE5ACE1F9F0D5800A8E9DD /* LaunchScreen.storyboard */; };
@@ -42,6 +45,12 @@
 /* Begin PBXFileReference section */
 		03F53921539A11BB50100C66 /* Pods-OpenBookLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenBookLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenBookLayout/Pods-OpenBookLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		2E80AD80EEF49E02D8B1E41E /* Pods-OpenBookLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenBookLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenBookLayout/Pods-OpenBookLayout.release.xcconfig"; sourceTree = "<group>"; };
+		58B73EC91FA06C0E004196E8 /* UIImage+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helper.h"; sourceTree = "<group>"; };
+		58B73ECA1FA06C0E004196E8 /* UIImage+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Helper.m"; sourceTree = "<group>"; };
+		58B73ECF1FA09062004196E8 /* UIView+Cliper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Cliper.h"; sourceTree = "<group>"; };
+		58B73ED01FA09062004196E8 /* UIView+Cliper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Cliper.m"; sourceTree = "<group>"; };
+		58B73ED31FA0976C004196E8 /* BookOpeningTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookOpeningTransition.h; sourceTree = "<group>"; };
+		58B73ED41FA0976C004196E8 /* BookOpeningTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookOpeningTransition.m; sourceTree = "<group>"; };
 		58BE5AC01F9F0D5800A8E9DD /* OpenBookLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenBookLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BE5AC31F9F0D5800A8E9DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58BE5AC41F9F0D5800A8E9DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +114,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		58B73EC81FA06BC8004196E8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				58B73EC91FA06C0E004196E8 /* UIImage+Helper.h */,
+				58B73ECA1FA06C0E004196E8 /* UIImage+Helper.m */,
+				58B73ECF1FA09062004196E8 /* UIView+Cliper.h */,
+				58B73ED01FA09062004196E8 /* UIView+Cliper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		58B73ED21FA096DD004196E8 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				58B73ED31FA0976C004196E8 /* BookOpeningTransition.h */,
+				58B73ED41FA0976C004196E8 /* BookOpeningTransition.m */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
 		58BE5AB71F9F0D5800A8E9DD = {
 			isa = PBXGroup;
 			children = (
@@ -130,9 +159,10 @@
 		58BE5AC21F9F0D5800A8E9DD /* OpenBookLayout */ = {
 			isa = PBXGroup;
 			children = (
+				58B73ED21FA096DD004196E8 /* Animator */,
+				58B73EC81FA06BC8004196E8 /* Helper */,
 				58BE5AFE1F9F149100A8E9DD /* CustomLayout */,
 				58BE5AF71F9F132800A8E9DD /* View */,
-				58BE5AF61F9F132300A8E9DD /* Model */,
 				58BE5AF51F9F131C00A8E9DD /* Controller */,
 				58BE5AC31F9F0D5800A8E9DD /* AppDelegate.h */,
 				58BE5AC41F9F0D5800A8E9DD /* AppDelegate.m */,
@@ -172,13 +202,6 @@
 				58BE5AFC1F9F135600A8E9DD /* BookDetailController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		58BE5AF61F9F132300A8E9DD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		58BE5AF71F9F132800A8E9DD /* View */ = {
@@ -395,14 +418,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B73ECB1FA06C0E004196E8 /* UIImage+Helper.m in Sources */,
 				58BE5B0E1F9F372400A8E9DD /* DetailCollectionCell.m in Sources */,
 				58BE5B111F9F378700A8E9DD /* BookFlippingLayout.m in Sources */,
 				58BE5AFA1F9F134400A8E9DD /* BookListController.m in Sources */,
+				58B73ED51FA0976C004196E8 /* BookOpeningTransition.m in Sources */,
 				58BE5AD31F9F0D5800A8E9DD /* main.m in Sources */,
 				58BE5AC51F9F0D5800A8E9DD /* AppDelegate.m in Sources */,
 				58BE5AFD1F9F135600A8E9DD /* BookDetailController.m in Sources */,
 				58BE5B0B1F9F2B6200A8E9DD /* BookLayout.m in Sources */,
 				58BE5B041F9F1EA900A8E9DD /* BookCollectionViewCell.m in Sources */,
+				58B73ED11FA09062004196E8 /* UIView+Cliper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

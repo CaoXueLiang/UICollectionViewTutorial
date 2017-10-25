@@ -7,6 +7,7 @@
 //
 
 #import "BookCollectionViewCell.h"
+#import "UIImage+Helper.h"
 
 @interface BookCollectionViewCell()
 @property (nonatomic,strong) UIImageView *bookImageView;
@@ -17,16 +18,16 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.contentView.backgroundColor = [UIColor whiteColor];
+        self.contentView.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.bookImageView];
         self.bookImageView.frame = self.contentView.bounds;
-        self.bookImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     return self;
 }
 
 - (void)setImageName:(NSString *)imageName{
-    self.bookImageView.image = [UIImage imageNamed:imageName];
+    UIImage *image = [UIImage imageNamed:imageName];
+    self.bookImageView.image = [image imageWithRoundedCornerRadius:50 corners:UIRectCornerBottomRight | UIRectCornerTopRight];
 }
 
 #pragma mark - Setter && Getter

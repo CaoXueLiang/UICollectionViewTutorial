@@ -7,11 +7,12 @@
 //
 
 #import "BookLayout.h"
+#import <YYCategories/YYCategories.h>
 
-#define ItemWidth 120
-#define ItermHeight 120 *1.57
+#define ItemWidth 140
+#define ItermHeight 140 *1.30
 #define Padding 50
-#define ACTIVE_DISTANCE 170
+#define ACTIVE_DISTANCE 190
 #define ZOOM_FACTOR 0.3
 @implementation BookLayout
 #pragma mark - Init Menthod
@@ -28,7 +29,7 @@
 
 #pragma mark - Override Menthod
 - (void)prepareLayout{
-    self.collectionView.contentInset = UIEdgeInsetsMake(100,CGRectGetWidth(self.collectionView.bounds)/2.0 - ItemWidth/2.0, 100, CGRectGetWidth(self.collectionView.bounds)/2.0 - ItemWidth/2.0);
+    self.collectionView.contentInset = UIEdgeInsetsMake(kScreenHeight/2.0 - ItermHeight/2.0,CGRectGetWidth(self.collectionView.bounds)/2.0 - ItemWidth/2.0, kScreenHeight/2.0 - ItermHeight/2.0, CGRectGetWidth(self.collectionView.bounds)/2.0 - ItemWidth/2.0);
 }
 
 /*返回滚动停止的点，自动对齐到网格*/
