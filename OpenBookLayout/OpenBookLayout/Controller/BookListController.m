@@ -7,13 +7,11 @@
 //
 
 #import "BookListController.h"
-#import "BookCollectionViewCell.h"
 #import "BookLayout.h"
 #import "BookDetailController.h"
 #import "BookOpeningTransition.h"
 
 @interface BookListController ()<UICollectionViewDataSource,UICollectionViewDelegate,UINavigationControllerDelegate>
-@property (nonatomic,strong) UICollectionView *myCollection;
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @end
 
@@ -37,6 +35,26 @@
     self.navigationController.delegate = self;
 }
 
+#pragma mark - Public
+/*获取当前选中的cell*/
+- (BookCollectionViewCell *)selectedCell{
+    NSIndexPath *indexPath = [self.myCollection indexPathForItemAtPoint:CGPointMake(self.myCollection.contentOffset.x + CGRectGetWidth(self.myCollection.bounds)/2.0, CGRectGetHeight(self.myCollection.bounds)/2.0)];
+    if ([self.myCollection cellForItemAtIndexPath:indexPath]) {
+        BookCollectionViewCell *cell = (BookCollectionViewCell *)[self.myCollection cellForItemAtIndexPath:indexPath];
+        return cell;
+    }else{
+        return nil;
+    }
+}
+
+- (void)openBookWithController:(BookDetailController *)controller{
+    [controller.view snapshotViewAfterScreenUpdates:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController pushViewController:controller animated:YES];
+        return ;
+    });
+}
+
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.dataArray.count;
@@ -51,7 +69,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSString *imageName = self.dataArray[indexPath.item];
     BookDetailController *controller = [BookDetailController initWithImageName:imageName];
-    [self.navigationController pushViewController:controller animated:YES];
+    [self openBookWithController:controller];
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -89,5 +107,6 @@
     }
     return _dataArray;
 }
+
 @end
 

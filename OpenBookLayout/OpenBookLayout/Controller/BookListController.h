@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BookCollectionViewCell.h"
 
 /**
  书籍列表
  */
 @interface BookListController : UIViewController
-
+@property (nonatomic,strong) UICollectionView *myCollection;
+- (BookCollectionViewCell *)selectedCell;
 @end

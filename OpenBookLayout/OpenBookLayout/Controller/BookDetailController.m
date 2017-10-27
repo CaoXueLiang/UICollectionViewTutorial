@@ -7,11 +7,9 @@
 //
 
 #import "BookDetailController.h"
-#import "DetailCollectionCell.h"
 #import "BookFlippingLayout.h"
 
 @interface BookDetailController ()<UICollectionViewDataSource>
-@property (nonatomic,strong) UICollectionView *myCollection;
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,copy) NSString *imageName;
 @end
@@ -65,7 +63,7 @@
         _dataArray = [[NSMutableArray alloc]init];
         [_dataArray addObject:self.imageName];
         [_dataArray addObject:@"page-blank"];
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 6; i++) {
             [_dataArray addObject:@"page-img"];
         }
     }

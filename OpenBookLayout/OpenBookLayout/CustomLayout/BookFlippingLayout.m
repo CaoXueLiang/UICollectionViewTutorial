@@ -10,7 +10,7 @@
 #import <YYCategories/YYCategories.h>
 
 #define ItemWidth 140
-#define ItermHeight 140 *1.5
+#define ItermHeight 140 *1.30
 @interface BookFlippingLayout()
 /*item的个数*/
 @property (nonatomic,assign) NSInteger numberOfItem;
@@ -20,7 +20,7 @@
 #pragma mark - Override Menthod
 - (void)prepareLayout{
     self.numberOfItem = [self.collectionView numberOfItemsInSection:0];
-    self.collectionView.scrollEnabled = YES;
+    self.collectionView.pagingEnabled = YES;
     self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
 }
 
@@ -53,9 +53,9 @@
     }
     CATransform3D ratation = [self transformWithIndexpath:indexPath ratio:MIN(MAX(ratio, -1), 1)];
     layout.transform3D = ratation;
-//    if (indexPath.row == 0) {
-//        layout.zIndex = CGFLOAT_MAX;
-//    }
+    if (indexPath.row == 0) {
+        layout.zIndex = CGFLOAT_MAX;
+    }
     return layout;
 }
 

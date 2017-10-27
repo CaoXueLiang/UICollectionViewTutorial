@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DetailCollectionCell.h"
 /**
  书籍详情
  */
 @interface BookDetailController : UIViewController
+@property (nonatomic,strong) UICollectionView *myCollection;
 + (instancetype)initWithImageName:(NSString *)imageName;
 @end

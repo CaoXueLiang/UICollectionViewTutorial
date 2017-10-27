@@ -13,8 +13,6 @@
 
 @interface DetailCollectionCell()
 @property (nonatomic,strong) UIImageView *bookImageView;
-@property (nonatomic,strong) UILabel *tipLabel;
-@property (nonatomic,strong) CAGradientLayer *gradientLayer;
 /*是否是右侧的page*/
 @property (nonatomic,assign) BOOL isRightPage;
 @end
