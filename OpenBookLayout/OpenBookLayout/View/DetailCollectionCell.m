@@ -24,6 +24,9 @@
     if (self) {
         self.contentView.backgroundColor = [UIColor clearColor];
         [self addSubViews];
+        //反锯齿
+        self.layer.allowsEdgeAntialiasing = YES;
+        self.bookImageView.layer.allowsEdgeAntialiasing = YES;
     }
     return self;
 }
@@ -89,12 +92,19 @@
     CGFloat inverseRatio = 1 - (ABS([self getRatioFromTransform]));
     if (_isRightPage) {
         //右侧page
-        self.gradientLayer.colors = @[(__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.45 *inverseRatio].CGColor,(__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.45*inverseRatio].CGColor,(__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.55*inverseRatio].CGColor];
-        self.gradientLayer.locations = @[@0,@0.02,@1];
+        self.gradientLayer.colors = @[
+              (__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.45 *inverseRatio].CGColor,
+              (__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.40*inverseRatio].CGColor,
+              (__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.55*inverseRatio].CGColor];
+        self.gradientLayer.locations = @[@0.00,@0.02,@1.00];
     }else{
         //左侧page
-        self.gradientLayer.colors = @[(__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.3*inverseRatio].CGColor,(__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.4*inverseRatio].CGColor,(__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.5*inverseRatio].CGColor,(__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.55*inverseRatio].CGColor];
-        self.gradientLayer.locations = @[@0,@0.5,@0.98,@1];
+        self.gradientLayer.colors = @[
+              (__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.3*inverseRatio].CGColor,
+              (__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.4*inverseRatio].CGColor,
+              (__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.5*inverseRatio].CGColor,
+              (__bridge id)[[UIColor darkGrayColor]colorWithAlphaComponent:0.55*inverseRatio].CGColor];
+        self.gradientLayer.locations = @[@0.00,@0.50,@0.98,@1.00];
     }
 }
 

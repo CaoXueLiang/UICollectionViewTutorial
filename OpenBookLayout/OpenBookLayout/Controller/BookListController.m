@@ -77,7 +77,8 @@
                                                          fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC{
     if (operation == UINavigationControllerOperationPush) {
-        return [BookOpeningTransition initWithAnimationType:AnimationTypePush];
+        return nil;
+        //[BookOpeningTransition initWithAnimationType:AnimationTypePush];
     }else{
         return nil;
     }

@@ -40,7 +40,7 @@
 }
 
 /*将bookPage设置为关闭状态*/
-- (void)closePageCell:(UICollectionViewCell *)pageCell{
+- (void)closePageCell:(DetailCollectionCell *)pageCell{
     CATransform3D transform = [self makePerspectiveTransform];
     if (pageCell.layer.anchorPoint.x == 0) {
         //右侧page
@@ -92,7 +92,7 @@
 
 #pragma mark - UIViewControllerAnimatedTransitioning
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext{
-    return 5;
+    return 2;
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
@@ -106,11 +106,11 @@
         [self setStartPositionForPushFromVC:fromVC toVC:toVC];
         [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.7 options:UIViewAnimationOptionCurveEaseIn animations:^{
             [self setEndPositionForPushFromVC:fromVC toVC:toVC];
-            toVC.myCollection.backgroundColor = self.toViewBackgroundColor;
             
         } completion:^(BOOL finished) {
             /*结束动画*/
             [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+            toVC.myCollection.backgroundColor = self.toViewBackgroundColor;
         }];
         
     }else if (self.type == AnimationTypePop){

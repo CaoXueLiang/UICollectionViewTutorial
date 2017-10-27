@@ -9,8 +9,8 @@
 #import "BookFlippingLayout.h"
 #import <YYCategories/YYCategories.h>
 
-#define ItemWidth 140
-#define ItermHeight 140 *1.30
+#define ItemWidth 140 *1.3
+#define ItermHeight 140 *1.30 *1.3
 @interface BookFlippingLayout()
 /*item的个数*/
 @property (nonatomic,assign) NSInteger numberOfItem;
@@ -31,7 +31,7 @@
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
     NSMutableArray *array = [[NSMutableArray alloc]init];
     for (int i = 0; i < self.numberOfItem; i++) {
-        NSIndexPath *path = [NSIndexPath indexPathForRow:i inSection:0];
+        NSIndexPath *path = [NSIndexPath indexPathForItem:i inSection:0];
         UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:path];
         if (attributes) {
             [array addObject:attributes];
@@ -54,7 +54,7 @@
     CATransform3D ratation = [self transformWithIndexpath:indexPath ratio:MIN(MAX(ratio, -1), 1)];
     layout.transform3D = ratation;
     if (indexPath.row == 0) {
-        layout.zIndex = CGFLOAT_MAX;
+        layout.zIndex = INT_MAX;
     }
     return layout;
 }
@@ -87,7 +87,9 @@
     //每张page的变换系数为0.1，让其看起来有层次感
     if (ratio > 0.5) {
         ratio = 0.5 + 0.1*(ratio - 0.5);
-    }else if (ratio < - 0.5){
+    }
+    
+    if (ratio < - 0.5){
         ratio = -0.5 + 0.1*(ratio + 0.5);
     }
     return ratio;
@@ -99,7 +101,9 @@
     if (indexPath.item % 2 == 0) {
         //旋转轴在page的左侧
         angle = (1 - radio) * (-M_PI_2);
-    }else{
+    }
+    
+    if (indexPath.item % 2 == 1){
         //旋转轴在page的右侧
         angle = (1 + radio) *M_PI_2;
     }
@@ -110,7 +114,7 @@
 - (CATransform3D)transformWithIndexpath:(NSIndexPath *)indexPath ratio:(CGFloat)ratio{
     //增加透视效果
     CATransform3D transform = CATransform3DIdentity;
-    transform.m34 = -1.0/1000.0;
+    transform.m34 = -1.0/2000.0;
     CGFloat angle = [self getAngleWithIndexPath:indexPath radio:ratio];
     transform = CATransform3DRotate(transform, angle, 0, 1, 0);
     return transform;
