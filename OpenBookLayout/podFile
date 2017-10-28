@@ -1,6 +1,0 @@
-platform :ios, '8.0'
-
-target 'OpenBookLayout' do
-  pod 'Masonry'
-  pod 'YYCategories'
-end
