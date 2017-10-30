@@ -12,7 +12,7 @@
 #import "CollectionHeaderFooter.h"
 #import "PhotoModel.h"
 
-@interface ViewController ()<UICollectionViewDataSource,CHTCollectionViewDelegateWaterfallLayout>
+@interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,CHTCollectionViewDelegateWaterfallLayout>
 @property (nonatomic,strong) UICollectionView *collectionView;
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @end
@@ -24,6 +24,12 @@
     self.navigationItem.title = @"首页";
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self.view addSubview:self.collectionView];
+    [self addLongGesture];
+}
+
+- (void)addLongGesture{
+    UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
+    [self.collectionView addGestureRecognizer:longGesture];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -48,9 +54,25 @@
     [self.collectionView reloadData];
 }
 
+#pragma mark - Event Response
+- (void)longPress:(UILongPressGestureRecognizer *)recognizer{
+    CGPoint currentPoint = [recognizer locationInView:self.collectionView];
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        /*获取当先选中的itemCell*/
+        NSIndexPath *selectedIndexPath = [self.collectionView indexPathForItemAtPoint:currentPoint];
+        [self.collectionView beginInteractiveMovementForItemAtIndexPath:selectedIndexPath];
+    }else if (recognizer.state == UIGestureRecognizerStateChanged){
+        [self.collectionView updateInteractiveMovementTargetPosition:currentPoint];
+    }else if (recognizer.state == UIGestureRecognizerStateEnded){
+        [self.collectionView endInteractiveMovement];
+    }else{
+        [self.collectionView cancelInteractiveMovement];
+    }
+}
+
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -82,6 +104,29 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     PhotoModel *model = self.dataArray[indexPath.item];
     return [NormalCollectionViewCell sizeWithModel:model layout:collectionViewLayout];
+}
+
+#pragma mark - UICollectionViewDelegate
+//iOS 9增加了重排功能
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath{
+    //只有重排完成后才对数据源进行修改
+  
+}
+
+- (void)moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath{
+    //只有重排完成后才对数据源进行修改
+    if (destinationIndexPath) {
+        //将起点的数据删除
+        PhotoModel *model = self.dataArray[sourceIndexPath.item];
+        [self.dataArray removeObjectAtIndex:sourceIndexPath.item];
+        
+        //将终点的数据插入
+        [self.dataArray insertObject:model atIndex:destinationIndexPath.item];
+    }
 }
 
 #pragma mark - Setter && Getter

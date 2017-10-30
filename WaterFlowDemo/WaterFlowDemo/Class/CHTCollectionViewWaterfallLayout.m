@@ -549,4 +549,26 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
   return index;
 }
 
+
+//移动相关
+- (UICollectionViewLayoutInvalidationContext *)invalidationContextForInteractivelyMovingItems:(NSArray *)targetIndexPaths withTargetPosition:(CGPoint)targetPosition previousIndexPaths:(NSArray *)previousIndexPaths previousPosition:(CGPoint)previousPosition{
+    
+    UICollectionViewLayoutInvalidationContext *context = [super invalidationContextForInteractivelyMovingItems:targetIndexPaths withTargetPosition:targetPosition previousIndexPaths:previousIndexPaths previousPosition:previousPosition];
+    
+    if([self.delegate respondsToSelector:@selector(moveItemAtIndexPath: toIndexPath:)]){
+        [self.delegate moveItemAtIndexPath:previousIndexPaths[0] toIndexPath:targetIndexPaths[0]];
+    }
+    return context;
+}
+
+- (UICollectionViewLayoutInvalidationContext *)invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:(NSArray *)indexPaths previousIndexPaths:(NSArray *)previousIndexPaths movementCancelled:(BOOL)movementCancelled{
+    
+    UICollectionViewLayoutInvalidationContext *context = [super invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:indexPaths previousIndexPaths:previousIndexPaths movementCancelled:movementCancelled];
+    
+    if(!movementCancelled){
+        
+    }
+    return context;
+}
+
 @end

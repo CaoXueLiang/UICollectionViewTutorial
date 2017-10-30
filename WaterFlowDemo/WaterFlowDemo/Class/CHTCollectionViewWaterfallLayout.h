@@ -205,6 +205,8 @@ extern NSString *const CHTCollectionElementKindSectionFooter;
  */
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumColumnSpacingForSectionAtIndex:(NSInteger)section;
 
+- (void)moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath;
+
 @end
 
 #pragma mark - CHTCollectionViewWaterfallLayout
@@ -321,5 +323,9 @@ extern NSString *const CHTCollectionElementKindSectionFooter;
  *    The width of an item is calculated based on number of columns, the collection view width, and the horizontal insets for that section.
  */
 - (CGFloat)itemWidthInSectionAtIndex:(NSInteger)section;
+
+- (UICollectionViewLayoutInvalidationContext *)invalidationContextForInteractivelyMovingItems:(NSArray *)targetIndexPaths withTargetPosition:(CGPoint)targetPosition previousIndexPaths:(NSArray *)previousIndexPaths previousPosition:(CGPoint)previousPosition;
+
+- (UICollectionViewLayoutInvalidationContext *)invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:(NSArray *)indexPaths previousIndexPaths:(NSArray *)previousIndexPaths movementCancelled:(BOOL)movementCancelled;
 
 @end

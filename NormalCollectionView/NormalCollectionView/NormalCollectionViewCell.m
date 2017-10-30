@@ -17,7 +17,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.contentView.backgroundColor = [UIColor orangeColor];
+        self.contentView.backgroundColor = [UIColor colorWithRed:100/255.0 green:149/255.0 blue:220/255.0 alpha:1];
         [self.contentView addSubview:self.tipLabel];
         self.tipLabel.frame = self.contentView.bounds;
     }
