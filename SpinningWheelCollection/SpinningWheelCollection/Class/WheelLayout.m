@@ -29,7 +29,7 @@
     return [WheelCollectionLayoutAttributes class];
 }
 
-#pragma mark - Init
+#pragma mark - Init Menthod
 - (instancetype)init{
     self = [super init];
     if (self) {

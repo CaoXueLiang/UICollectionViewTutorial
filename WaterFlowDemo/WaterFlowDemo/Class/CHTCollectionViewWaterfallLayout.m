@@ -230,8 +230,10 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
     for (idx = 0; idx < columnCount; idx++) {
       [sectionColumnHeights addObject:@(0)];
     }
+    /*将section中每一列的高度保存下来*/
     [self.columnHeights addObject:sectionColumnHeights];
   }
+    
   // Create attributes
   CGFloat top = 0;
   UICollectionViewLayoutAttributes *attributes;
@@ -309,8 +311,10 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
     // Item will be put into shortest column.
     for (idx = 0; idx < itemCount; idx++) {
       NSIndexPath *indexPath = [NSIndexPath indexPathForItem:idx inSection:section];
+      /*获取当前高度最短的column*/
       NSUInteger columnIndex = [self nextColumnIndexForItem:idx inSection:section];
       CGFloat xOffset = sectionInset.left + (itemWidth + columnSpacing) * columnIndex;
+      /*当第一次时默认的高度都是sectionHeader的高度*/
       CGFloat yOffset = [self.columnHeights[section][columnIndex] floatValue];
       CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
       CGFloat itemHeight = 0;
@@ -550,7 +554,7 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
 }
 
 
-//移动相关
+//cell移动相关
 - (UICollectionViewLayoutInvalidationContext *)invalidationContextForInteractivelyMovingItems:(NSArray *)targetIndexPaths withTargetPosition:(CGPoint)targetPosition previousIndexPaths:(NSArray *)previousIndexPaths previousPosition:(CGPoint)previousPosition{
     
     UICollectionViewLayoutInvalidationContext *context = [super invalidationContextForInteractivelyMovingItems:targetIndexPaths withTargetPosition:targetPosition previousIndexPaths:previousIndexPaths previousPosition:previousPosition];
