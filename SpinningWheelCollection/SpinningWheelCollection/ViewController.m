@@ -23,6 +23,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.myCollection];
     self.myCollection.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 11.0){
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 110000
+        self.myCollection.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+#endif
+    }
 }
 
 #pragma mark - UICollectionView M
@@ -52,7 +57,7 @@
 - (NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [[NSMutableArray alloc]init];
-        for (int i = 1; i < 15; i++) {
+        for (int i = 1; i < 10; i++) {
             [_dataArray addObject:[NSString stringWithFormat:@"%d",i]];
         }
     }

@@ -49,27 +49,30 @@
     if (numberOfItem == 0) {
         return;
     }
+    /*获取总的旋转的角度*/
     CGFloat angleAtExtreme = (numberOfItem - 1) * self.anglePerItem;
-    CGFloat angle = -angleAtExtreme * self.collectionView.contentOffset.x / (self.collectionView.contentSize.width - CGRectGetWidth(self.collectionView.bounds));
-    //NSLog(@"---%f---",self.collectionView.contentOffset.x);
-
+    /*随着UICollectionView的移动，第0个cell初始时的角度*/
+    CGFloat angle = -1 *angleAtExtreme * self.collectionView.contentOffset.x / (self.collectionView.contentSize.width - CGRectGetWidth(self.collectionView.bounds));
+    /*当前的屏幕中心的的坐标*/
+    CGFloat centerX = self.collectionView.contentOffset.x + CGRectGetWidth(self.collectionView.bounds)/2.0;
+    /*锚点的位置*/
+    CGFloat anchorPointY = (self.itermSize.height/2.0 + self.radius) / self.itermSize.height;
+    
     for (int i = 0; i < numberOfItem; i++) {
-        CGFloat centerX = self.collectionView.contentOffset.x + CGRectGetWidth(self.collectionView.bounds)/2.0;
-        CGFloat anchorPointY = (self.itermSize.height/2.0 + self.radius) / self.itermSize.height;
         WheelCollectionLayoutAttributes *attribute = [WheelCollectionLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
         attribute.anchorPoint = CGPointMake(0.5, anchorPointY);
         attribute.size = self.itermSize;
         attribute.center = CGPointMake(centerX, CGRectGetMidY(self.collectionView.bounds));
         attribute.angle = angle + self.anglePerItem *i;
         attribute.transform = CGAffineTransformMakeRotation(attribute.angle);
-        attribute.zIndex = (int)attribute.angle *100;
+        attribute.zIndex = (int)(-1) *i *1000;
         [self.allAttributeArray addObject:attribute];
     }
 }
 
 - (CGSize)collectionViewContentSize{
     CGFloat numberOfIterm = [self.collectionView numberOfItemsInSection:0];
-    return CGSizeMake(numberOfIterm *self.itermSize.width, CGRectGetHeight(self.collectionView.bounds) - 64);
+    return CGSizeMake(numberOfIterm *self.itermSize.width, CGRectGetHeight(self.collectionView.bounds));
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
@@ -84,6 +87,34 @@
     return YES;
 }
 
+//- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity{
+//    /*预期停下来original*/
+//    CGPoint finalContentOffset = proposedContentOffset;
+//
+//    /*影响参数*/
+//    CGFloat angleAtExtreme = ([self.collectionView numberOfItemsInSection:0] - 1) * self.anglePerItem;
+//    CGFloat factor = -angleAtExtreme / (self.collectionView.contentSize.width - CGRectGetWidth(self.collectionView.bounds));
+//
+//    /*默认停下来时，旋转的角度*/
+//    CGFloat proposedAngle = factor * self.collectionView.contentOffset.x;
+//    CGFloat ratio = proposedAngle / self.anglePerItem;
+//
+//    CGFloat multiplier = 0;
+//    if (velocity.x > 0) {
+//        //向右运动
+//        multiplier = ceil(ratio);
+//    }else if (velocity.x < 0){
+//        //向左运动
+//        multiplier = floor(ratio);
+//    }else{
+//        //速度为0
+//        multiplier = round(ratio);
+//    }
+//
+//    finalContentOffset.x = multiplier * self.anglePerItem / factor;
+//    return finalContentOffset;
+//}
+
 #pragma mark - Setter && Getter
 - (NSMutableArray *)allAttributeArray{
     if (!_allAttributeArray) {
@@ -93,3 +124,4 @@
 }
 
 @end
+

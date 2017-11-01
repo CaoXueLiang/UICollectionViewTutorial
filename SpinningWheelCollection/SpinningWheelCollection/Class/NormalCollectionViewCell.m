@@ -48,6 +48,9 @@
         _bookImageView.contentMode = UIViewContentModeScaleAspectFill;
         _bookImageView.layer.cornerRadius = 6;
         _bookImageView.layer.masksToBounds = YES;
+        _bookImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+        _bookImageView.layer.borderWidth = 1;
+        _bookImageView.layer.allowsEdgeAntialiasing = YES;
     }
     return _bookImageView;
 }

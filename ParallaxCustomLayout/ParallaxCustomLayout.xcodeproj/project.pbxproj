@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		583E71531FA9D20600356C6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E71521FA9D20600356C6C /* AppDelegate.m */; };
+		583E71561FA9D20600356C6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E71551FA9D20600356C6C /* ViewController.m */; };
+		583E715B1FA9D20700356C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 583E715A1FA9D20700356C6C /* Assets.xcassets */; };
+		583E715E1FA9D20700356C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 583E715C1FA9D20700356C6C /* LaunchScreen.storyboard */; };
+		583E71611FA9D20700356C6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E71601FA9D20700356C6C /* main.m */; };
+		583E716B1FA9D20700356C6C /* ParallaxCustomLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E716A1FA9D20700356C6C /* ParallaxCustomLayoutTests.m */; };
+		583E71761FA9D20700356C6C /* ParallaxCustomLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E71751FA9D20700356C6C /* ParallaxCustomLayoutUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		583E71671FA9D20700356C6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 583E71461FA9D20600356C6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 583E714D1FA9D20600356C6C;
+			remoteInfo = ParallaxCustomLayout;
+		};
+		583E71721FA9D20700356C6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 583E71461FA9D20600356C6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 583E714D1FA9D20600356C6C;
+			remoteInfo = ParallaxCustomLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		583E714E1FA9D20600356C6C /* ParallaxCustomLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxCustomLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		583E71511FA9D20600356C6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		583E71521FA9D20600356C6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		583E71541FA9D20600356C6C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		583E71551FA9D20600356C6C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		583E715A1FA9D20700356C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		583E715D1FA9D20700356C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		583E715F1FA9D20700356C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583E71601FA9D20700356C6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		583E71661FA9D20700356C6C /* ParallaxCustomLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxCustomLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		583E716A1FA9D20700356C6C /* ParallaxCustomLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxCustomLayoutTests.m; sourceTree = "<group>"; };
+		583E716C1FA9D20700356C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583E71711FA9D20700356C6C /* ParallaxCustomLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxCustomLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		583E71751FA9D20700356C6C /* ParallaxCustomLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxCustomLayoutUITests.m; sourceTree = "<group>"; };
+		583E71771FA9D20700356C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		583E714B1FA9D20600356C6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583E71631FA9D20700356C6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583E716E1FA9D20700356C6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		583E71451FA9D20600356C6C = {
+			isa = PBXGroup;
+			children = (
+				583E71501FA9D20600356C6C /* ParallaxCustomLayout */,
+				583E71691FA9D20700356C6C /* ParallaxCustomLayoutTests */,
+				583E71741FA9D20700356C6C /* ParallaxCustomLayoutUITests */,
+				583E714F1FA9D20600356C6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		583E714F1FA9D20600356C6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				583E714E1FA9D20600356C6C /* ParallaxCustomLayout.app */,
+				583E71661FA9D20700356C6C /* ParallaxCustomLayoutTests.xctest */,
+				583E71711FA9D20700356C6C /* ParallaxCustomLayoutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		583E71501FA9D20600356C6C /* ParallaxCustomLayout */ = {
+			isa = PBXGroup;
+			children = (
+				583E71831FA9D2C700356C6C /* Class */,
+				583E71511FA9D20600356C6C /* AppDelegate.h */,
+				583E71521FA9D20600356C6C /* AppDelegate.m */,
+				583E71541FA9D20600356C6C /* ViewController.h */,
+				583E71551FA9D20600356C6C /* ViewController.m */,
+				583E715A1FA9D20700356C6C /* Assets.xcassets */,
+				583E715C1FA9D20700356C6C /* LaunchScreen.storyboard */,
+				583E715F1FA9D20700356C6C /* Info.plist */,
+				583E71601FA9D20700356C6C /* main.m */,
+			);
+			path = ParallaxCustomLayout;
+			sourceTree = "<group>";
+		};
+		583E71691FA9D20700356C6C /* ParallaxCustomLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				583E716A1FA9D20700356C6C /* ParallaxCustomLayoutTests.m */,
+				583E716C1FA9D20700356C6C /* Info.plist */,
+			);
+			path = ParallaxCustomLayoutTests;
+			sourceTree = "<group>";
+		};
+		583E71741FA9D20700356C6C /* ParallaxCustomLayoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				583E71751FA9D20700356C6C /* ParallaxCustomLayoutUITests.m */,
+				583E71771FA9D20700356C6C /* Info.plist */,
+			);
+			path = ParallaxCustomLayoutUITests;
+			sourceTree = "<group>";
+		};
+		583E71831FA9D2C700356C6C /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		583E714D1FA9D20600356C6C /* ParallaxCustomLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 583E717A1FA9D20700356C6C /* Build configuration list for PBXNativeTarget "ParallaxCustomLayout" */;
+			buildPhases = (
+				583E714A1FA9D20600356C6C /* Sources */,
+				583E714B1FA9D20600356C6C /* Frameworks */,
+				583E714C1FA9D20600356C6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParallaxCustomLayout;
+			productName = ParallaxCustomLayout;
+			productReference = 583E714E1FA9D20600356C6C /* ParallaxCustomLayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		583E71651FA9D20700356C6C /* ParallaxCustomLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 583E717D1FA9D20700356C6C /* Build configuration list for PBXNativeTarget "ParallaxCustomLayoutTests" */;
+			buildPhases = (
+				583E71621FA9D20700356C6C /* Sources */,
+				583E71631FA9D20700356C6C /* Frameworks */,
+				583E71641FA9D20700356C6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				583E71681FA9D20700356C6C /* PBXTargetDependency */,
+			);
+			name = ParallaxCustomLayoutTests;
+			productName = ParallaxCustomLayoutTests;
+			productReference = 583E71661FA9D20700356C6C /* ParallaxCustomLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		583E71701FA9D20700356C6C /* ParallaxCustomLayoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 583E71801FA9D20700356C6C /* Build configuration list for PBXNativeTarget "ParallaxCustomLayoutUITests" */;
+			buildPhases = (
+				583E716D1FA9D20700356C6C /* Sources */,
+				583E716E1FA9D20700356C6C /* Frameworks */,
+				583E716F1FA9D20700356C6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				583E71731FA9D20700356C6C /* PBXTargetDependency */,
+			);
+			name = ParallaxCustomLayoutUITests;
+			productName = ParallaxCustomLayoutUITests;
+			productReference = 583E71711FA9D20700356C6C /* ParallaxCustomLayoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		583E71461FA9D20600356C6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = caoxueliang.cn;
+				TargetAttributes = {
+					583E714D1FA9D20600356C6C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					583E71651FA9D20700356C6C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 583E714D1FA9D20600356C6C;
+					};
+					583E71701FA9D20700356C6C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 583E714D1FA9D20600356C6C;
+					};
+				};
+			};
+			buildConfigurationList = 583E71491FA9D20600356C6C /* Build configuration list for PBXProject "ParallaxCustomLayout" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 583E71451FA9D20600356C6C;
+			productRefGroup = 583E714F1FA9D20600356C6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				583E714D1FA9D20600356C6C /* ParallaxCustomLayout */,
+				583E71651FA9D20700356C6C /* ParallaxCustomLayoutTests */,
+				583E71701FA9D20700356C6C /* ParallaxCustomLayoutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		583E714C1FA9D20600356C6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583E715E1FA9D20700356C6C /* LaunchScreen.storyboard in Resources */,
+				583E715B1FA9D20700356C6C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583E71641FA9D20700356C6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583E716F1FA9D20700356C6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		583E714A1FA9D20600356C6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583E71561FA9D20600356C6C /* ViewController.m in Sources */,
+				583E71611FA9D20700356C6C /* main.m in Sources */,
+				583E71531FA9D20600356C6C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583E71621FA9D20700356C6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583E716B1FA9D20700356C6C /* ParallaxCustomLayoutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583E716D1FA9D20700356C6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583E71761FA9D20700356C6C /* ParallaxCustomLayoutUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		583E71681FA9D20700356C6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 583E714D1FA9D20600356C6C /* ParallaxCustomLayout */;
+			targetProxy = 583E71671FA9D20700356C6C /* PBXContainerItemProxy */;
+		};
+		583E71731FA9D20700356C6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 583E714D1FA9D20600356C6C /* ParallaxCustomLayout */;
+			targetProxy = 583E71721FA9D20700356C6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		583E715C1FA9D20700356C6C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				583E715D1FA9D20700356C6C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		583E71781FA9D20700356C6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		583E71791FA9D20700356C6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		583E717B1FA9D20700356C6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = ParallaxCustomLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.ParallaxCustomLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		583E717C1FA9D20700356C6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = ParallaxCustomLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.ParallaxCustomLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		583E717E1FA9D20700356C6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = ParallaxCustomLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.ParallaxCustomLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParallaxCustomLayout.app/ParallaxCustomLayout";
+			};
+			name = Debug;
+		};
+		583E717F1FA9D20700356C6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = ParallaxCustomLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.ParallaxCustomLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParallaxCustomLayout.app/ParallaxCustomLayout";
+			};
+			name = Release;
+		};
+		583E71811FA9D20700356C6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = ParallaxCustomLayoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.ParallaxCustomLayoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ParallaxCustomLayout;
+			};
+			name = Debug;
+		};
+		583E71821FA9D20700356C6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				INFOPLIST_FILE = ParallaxCustomLayoutUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.ParallaxCustomLayoutUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ParallaxCustomLayout;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		583E71491FA9D20600356C6C /* Build configuration list for PBXProject "ParallaxCustomLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				583E71781FA9D20700356C6C /* Debug */,
+				583E71791FA9D20700356C6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		583E717A1FA9D20700356C6C /* Build configuration list for PBXNativeTarget "ParallaxCustomLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				583E717B1FA9D20700356C6C /* Debug */,
+				583E717C1FA9D20700356C6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		583E717D1FA9D20700356C6C /* Build configuration list for PBXNativeTarget "ParallaxCustomLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				583E717E1FA9D20700356C6C /* Debug */,
+				583E717F1FA9D20700356C6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		583E71801FA9D20700356C6C /* Build configuration list for PBXNativeTarget "ParallaxCustomLayoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				583E71811FA9D20700356C6C /* Debug */,
+				583E71821FA9D20700356C6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 583E71461FA9D20600356C6C /* Project object */;
+}
