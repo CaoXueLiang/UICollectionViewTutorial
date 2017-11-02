@@ -41,6 +41,7 @@
     if (!_backImageView) {
         _backImageView = [[UIImageView alloc]init];
         _backImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _backImageView.clipsToBounds = YES;
     }
     return _backImageView;
 }

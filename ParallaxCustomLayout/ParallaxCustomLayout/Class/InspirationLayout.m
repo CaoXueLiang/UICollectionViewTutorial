@@ -9,9 +9,9 @@
 #import "InspirationLayout.h"
 
 /*默认情况下iterm的高度*/
-CGFloat const standardHeight = 100;
+CGFloat const standardHeight = 100.0;
 /*滚动时item的最大高度*/
-CGFloat const featuredHeight = 280;
+CGFloat const featuredHeight = 280.0;
 
 @interface InspirationLayout()
 @property (nonatomic,strong) NSMutableArray *attributesArray;
@@ -42,7 +42,7 @@ CGFloat const featuredHeight = 280;
         NSIndexPath *path = [NSIndexPath indexPathForItem:i inSection:0];
         UICollectionViewLayoutAttributes *attribute = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:path];
         /*下一个cell都在之前的cell之上*/
-        attribute.zIndex = i;
+        attribute.zIndex = path.item;
         /*初始化时设置cell的高度都为标准高度*/
         CGFloat height = standardHeight;
         
@@ -51,17 +51,18 @@ CGFloat const featuredHeight = 280;
             CGFloat yOffSet = standardHeight * [self nextItemPercentageOffset];
             y = self.collectionView.contentOffset.y - yOffSet;
             height = featuredHeight;
-            
+
         }else if (path.item == [self featuredItemIndex] + 1 && path.item != numberOfIterm){
             /*在featuredCell之下，随着用户滚动逐渐变大*/
             CGFloat maxY = y + standardHeight;
             height = standardHeight + MAX((featuredHeight - standardHeight) * [self nextItemPercentageOffset], 0);
             y = maxY - height;
         }
-        attribute.frame = CGRectMake(0, y, CGRectGetWidth(self.collectionView.bounds), height);
+        frame = CGRectMake(0, y, CGRectGetWidth(self.collectionView.bounds), height);
+        attribute.frame = frame;
         [self.attributesArray addObject:attribute];
-        NSLog(@"%@",NSStringFromCGRect(attribute.frame));
-        y = CGRectGetMaxY(attribute.frame);
+        NSLog(@"--%f--",self.collectionView.contentOffset.y);
+        y = CGRectGetMaxY(frame);
     }
 }
 
@@ -73,10 +74,6 @@ CGFloat const featuredHeight = 280;
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
     return self.attributesArray;
-}
-
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return self.attributesArray[indexPath.item];
 }
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{

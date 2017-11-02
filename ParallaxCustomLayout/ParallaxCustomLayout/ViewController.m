@@ -21,14 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"首页";
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController setNavigationBarHidden:YES];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Pattern"]];
     [self.view addSubview:self.myCollection];
+    self.myCollection.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     if ([UIDevice currentDevice].systemVersion.floatValue >= 11.0){
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 110000
         self.myCollection.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 #endif
     }
+    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
@@ -52,7 +53,7 @@
     if (!_myCollection) {
         InspirationLayout *layout = [[InspirationLayout alloc]init];
         _myCollection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
-        _myCollection.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        _myCollection.backgroundColor = [UIColor clearColor];
         [_myCollection registerClass:[InspirationCell class] forCellWithReuseIdentifier:@"InspirationCell"];
         _myCollection.dataSource = self;
     }
