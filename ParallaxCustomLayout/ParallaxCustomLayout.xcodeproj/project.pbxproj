@@ -14,6 +14,10 @@
 		583E71611FA9D20700356C6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E71601FA9D20700356C6C /* main.m */; };
 		583E716B1FA9D20700356C6C /* ParallaxCustomLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E716A1FA9D20700356C6C /* ParallaxCustomLayoutTests.m */; };
 		583E71761FA9D20700356C6C /* ParallaxCustomLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E71751FA9D20700356C6C /* ParallaxCustomLayoutUITests.m */; };
+		589FC7CA1FAAED6E00EFBE6D /* InspirationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FC7C91FAAED6E00EFBE6D /* InspirationCell.m */; };
+		589FC7CD1FAAEE1B00EFBE6D /* InspirationLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FC7CC1FAAEE1B00EFBE6D /* InspirationLayout.m */; };
+		589FC7D21FAAF04900EFBE6D /* InspirationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FC7D11FAAF04900EFBE6D /* InspirationModel.m */; };
+		589FC7D41FAB0FC400EFBE6D /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 589FC7D31FAB0FC400EFBE6D /* Inspirations.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,13 @@
 		583E71711FA9D20700356C6C /* ParallaxCustomLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxCustomLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		583E71751FA9D20700356C6C /* ParallaxCustomLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxCustomLayoutUITests.m; sourceTree = "<group>"; };
 		583E71771FA9D20700356C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589FC7C81FAAED6E00EFBE6D /* InspirationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InspirationCell.h; sourceTree = "<group>"; };
+		589FC7C91FAAED6E00EFBE6D /* InspirationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InspirationCell.m; sourceTree = "<group>"; };
+		589FC7CB1FAAEE1B00EFBE6D /* InspirationLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InspirationLayout.h; sourceTree = "<group>"; };
+		589FC7CC1FAAEE1B00EFBE6D /* InspirationLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InspirationLayout.m; sourceTree = "<group>"; };
+		589FC7D01FAAF04900EFBE6D /* InspirationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InspirationModel.h; sourceTree = "<group>"; };
+		589FC7D11FAAF04900EFBE6D /* InspirationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InspirationModel.m; sourceTree = "<group>"; };
+		589FC7D31FAB0FC400EFBE6D /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +110,8 @@
 		583E71501FA9D20600356C6C /* ParallaxCustomLayout */ = {
 			isa = PBXGroup;
 			children = (
+				589FC7D31FAB0FC400EFBE6D /* Inspirations.plist */,
+				589FC7CF1FAAF02400EFBE6D /* Model */,
 				583E71831FA9D2C700356C6C /* Class */,
 				583E71511FA9D20600356C6C /* AppDelegate.h */,
 				583E71521FA9D20600356C6C /* AppDelegate.m */,
@@ -133,8 +146,21 @@
 		583E71831FA9D2C700356C6C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				589FC7C81FAAED6E00EFBE6D /* InspirationCell.h */,
+				589FC7C91FAAED6E00EFBE6D /* InspirationCell.m */,
+				589FC7CB1FAAEE1B00EFBE6D /* InspirationLayout.h */,
+				589FC7CC1FAAEE1B00EFBE6D /* InspirationLayout.m */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		589FC7CF1FAAF02400EFBE6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				589FC7D01FAAF04900EFBE6D /* InspirationModel.h */,
+				589FC7D11FAAF04900EFBE6D /* InspirationModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +271,7 @@
 			files = (
 				583E715E1FA9D20700356C6C /* LaunchScreen.storyboard in Resources */,
 				583E715B1FA9D20700356C6C /* Assets.xcassets in Resources */,
+				589FC7D41FAB0FC400EFBE6D /* Inspirations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589FC7CA1FAAED6E00EFBE6D /* InspirationCell.m in Sources */,
 				583E71561FA9D20600356C6C /* ViewController.m in Sources */,
+				589FC7D21FAAF04900EFBE6D /* InspirationModel.m in Sources */,
+				589FC7CD1FAAEE1B00EFBE6D /* InspirationLayout.m in Sources */,
 				583E71611FA9D20700356C6C /* main.m in Sources */,
 				583E71531FA9D20600356C6C /* AppDelegate.m in Sources */,
 			);
@@ -426,13 +456,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
 				INFOPLIST_FILE = ParallaxCustomLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.ParallaxCustomLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -441,13 +473,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
+				DEVELOPMENT_TEAM = 49YMBTW8W3;
 				INFOPLIST_FILE = ParallaxCustomLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.ParallaxCustomLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
