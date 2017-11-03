@@ -51,7 +51,7 @@ CGFloat const featuredHeight = 280.0;
             CGFloat yOffSet = standardHeight * [self nextItemPercentageOffset];
             y = self.collectionView.contentOffset.y - yOffSet;
             height = featuredHeight;
-
+            
         }else if (path.item == [self featuredItemIndex] + 1 && path.item != numberOfIterm){
             /*在featuredCell之下，随着用户滚动逐渐变大*/
             CGFloat maxY = y + standardHeight;
@@ -61,7 +61,8 @@ CGFloat const featuredHeight = 280.0;
         frame = CGRectMake(0, y, CGRectGetWidth(self.collectionView.bounds), height);
         attribute.frame = frame;
         [self.attributesArray addObject:attribute];
-        NSLog(@"--%f--",self.collectionView.contentOffset.y);
+        
+        /*获取下一个cell的初始的Y值*/
         y = CGRectGetMaxY(frame);
     }
 }
@@ -73,7 +74,13 @@ CGFloat const featuredHeight = 280.0;
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
-    return self.attributesArray;
+    NSMutableArray *tmpArray = [[NSMutableArray alloc]init];
+    for (UICollectionViewLayoutAttributes *attributes in self.attributesArray) {
+        if (CGRectIntersectsRect(attributes.frame, rect)) {
+            [tmpArray addObject:attributes];
+        }
+    }
+    return tmpArray;
 }
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
@@ -87,7 +94,7 @@ CGFloat const featuredHeight = 280.0;
    return MAX(0, index);
 }
 
-/*standardCell -> featuredCell*/
+/*standardCell -> featuredCell,比率0 ~ 1之间*/
 - (CGFloat)nextItemPercentageOffset{
     CGFloat percent = (self.collectionView.contentOffset.y / self.dragOffset) - [self featuredItemIndex];
     return percent;
@@ -102,3 +109,4 @@ CGFloat const featuredHeight = 280.0;
 }
 
 @end
+

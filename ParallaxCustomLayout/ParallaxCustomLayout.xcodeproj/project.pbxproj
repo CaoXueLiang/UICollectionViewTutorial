@@ -18,6 +18,8 @@
 		589FC7CD1FAAEE1B00EFBE6D /* InspirationLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FC7CC1FAAEE1B00EFBE6D /* InspirationLayout.m */; };
 		589FC7D21FAAF04900EFBE6D /* InspirationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FC7D11FAAF04900EFBE6D /* InspirationModel.m */; };
 		589FC7D41FAB0FC400EFBE6D /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 589FC7D31FAB0FC400EFBE6D /* Inspirations.plist */; };
+		58D60E9C1FAC7395003C53CB /* UIImage+Decompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D60E9B1FAC7395003C53CB /* UIImage+Decompression.m */; };
+		7802CBE92C887A337782CBC9 /* libPods-ParallaxCustomLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCB06AE2858CA0711F4EE87 /* libPods-ParallaxCustomLayout.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,11 @@
 		589FC7D01FAAF04900EFBE6D /* InspirationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InspirationModel.h; sourceTree = "<group>"; };
 		589FC7D11FAAF04900EFBE6D /* InspirationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InspirationModel.m; sourceTree = "<group>"; };
 		589FC7D31FAB0FC400EFBE6D /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
+		58D60E9A1FAC7395003C53CB /* UIImage+Decompression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Decompression.h"; sourceTree = "<group>"; };
+		58D60E9B1FAC7395003C53CB /* UIImage+Decompression.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Decompression.m"; sourceTree = "<group>"; };
+		7BCB06AE2858CA0711F4EE87 /* libPods-ParallaxCustomLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParallaxCustomLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C928EEF5CA562BF3471BC17F /* Pods-ParallaxCustomLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallaxCustomLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParallaxCustomLayout/Pods-ParallaxCustomLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		E595CB6377E12BCFF342A7EC /* Pods-ParallaxCustomLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallaxCustomLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParallaxCustomLayout/Pods-ParallaxCustomLayout.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7802CBE92C887A337782CBC9 /* libPods-ParallaxCustomLayout.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E889F6ACF32513019921430 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BCB06AE2858CA0711F4EE87 /* libPods-ParallaxCustomLayout.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		583E71451FA9D20600356C6C = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +110,8 @@
 				583E71691FA9D20700356C6C /* ParallaxCustomLayoutTests */,
 				583E71741FA9D20700356C6C /* ParallaxCustomLayoutUITests */,
 				583E714F1FA9D20600356C6C /* Products */,
+				EEC21BDB0FC0F9B7EB9FBFC0 /* Pods */,
+				3E889F6ACF32513019921430 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				589FC7D31FAB0FC400EFBE6D /* Inspirations.plist */,
+				58D60E991FAC735D003C53CB /* Helper */,
 				589FC7CF1FAAF02400EFBE6D /* Model */,
 				583E71831FA9D2C700356C6C /* Class */,
 				583E71511FA9D20600356C6C /* AppDelegate.h */,
@@ -163,6 +182,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		58D60E991FAC735D003C53CB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				58D60E9A1FAC7395003C53CB /* UIImage+Decompression.h */,
+				58D60E9B1FAC7395003C53CB /* UIImage+Decompression.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EEC21BDB0FC0F9B7EB9FBFC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C928EEF5CA562BF3471BC17F /* Pods-ParallaxCustomLayout.debug.xcconfig */,
+				E595CB6377E12BCFF342A7EC /* Pods-ParallaxCustomLayout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 583E717A1FA9D20700356C6C /* Build configuration list for PBXNativeTarget "ParallaxCustomLayout" */;
 			buildPhases = (
+				6801969178423FC40DC00EF9 /* [CP] Check Pods Manifest.lock */,
 				583E714A1FA9D20600356C6C /* Sources */,
 				583E714B1FA9D20600356C6C /* Frameworks */,
 				583E714C1FA9D20600356C6C /* Resources */,
+				F14F298F9364FC644CD36EFC /* [CP] Embed Pods Frameworks */,
+				FD013DCBCE42B79F846F74D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +331,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6801969178423FC40DC00EF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F14F298F9364FC644CD36EFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParallaxCustomLayout/Pods-ParallaxCustomLayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD013DCBCE42B79F846F74D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParallaxCustomLayout/Pods-ParallaxCustomLayout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		583E714A1FA9D20600356C6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -299,6 +387,7 @@
 				589FC7CA1FAAED6E00EFBE6D /* InspirationCell.m in Sources */,
 				583E71561FA9D20600356C6C /* ViewController.m in Sources */,
 				589FC7D21FAAF04900EFBE6D /* InspirationModel.m in Sources */,
+				58D60E9C1FAC7395003C53CB /* UIImage+Decompression.m in Sources */,
 				589FC7CD1FAAEE1B00EFBE6D /* InspirationLayout.m in Sources */,
 				583E71611FA9D20700356C6C /* main.m in Sources */,
 				583E71531FA9D20600356C6C /* AppDelegate.m in Sources */,
@@ -454,6 +543,7 @@
 		};
 		583E717B1FA9D20700356C6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C928EEF5CA562BF3471BC17F /* Pods-ParallaxCustomLayout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -471,6 +561,7 @@
 		};
 		583E717C1FA9D20700356C6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E595CB6377E12BCFF342A7EC /* Pods-ParallaxCustomLayout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

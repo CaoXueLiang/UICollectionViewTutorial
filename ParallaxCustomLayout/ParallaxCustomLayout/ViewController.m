@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"首页";
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Pattern"]];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.myCollection];
     self.myCollection.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     if ([UIDevice currentDevice].systemVersion.floatValue >= 11.0){
@@ -29,7 +29,6 @@
         self.myCollection.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 #endif
     }
-    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
