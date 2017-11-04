@@ -15,8 +15,6 @@ CGFloat const featuredHeight = 280.0;
 
 @interface InspirationLayout()
 @property (nonatomic,strong) NSMutableArray *attributesArray;
-/*standard -> featured拖拽的距离*/
-@property (nonatomic,assign) CGFloat dragOffset;
 @end
 
 @implementation InspirationLayout
@@ -25,6 +23,7 @@ CGFloat const featuredHeight = 280.0;
     self = [super init];
     if (self) {
         self.dragOffset = 180.0;
+        self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
     }
     return self;
 }
@@ -65,6 +64,9 @@ CGFloat const featuredHeight = 280.0;
         /*获取下一个cell的初始的Y值*/
         y = CGRectGetMaxY(frame);
     }
+    
+    //重新刷新collectionView，不然数据会错乱
+    [self.collectionView reloadData];
 }
 
 - (CGSize)collectionViewContentSize{
@@ -83,8 +85,18 @@ CGFloat const featuredHeight = 280.0;
     return tmpArray;
 }
 
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return self.attributesArray[indexPath.item];
+}
+
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
     return YES;
+}
+
+- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity{
+    NSInteger currentFeaturedIndex = round(proposedContentOffset.y / self.dragOffset);
+    CGFloat yOffSet = currentFeaturedIndex * self.dragOffset;
+    return CGPointMake(0, yOffSet);
 }
 
 #pragma mark - Private Menthod

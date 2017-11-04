@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface InspirationLayout : UICollectionViewLayout
-
+/*standard -> featured拖拽的距离*/
+@property (nonatomic,assign) CGFloat dragOffset;
 @end
