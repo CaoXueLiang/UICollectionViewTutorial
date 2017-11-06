@@ -54,7 +54,7 @@
     if (!_myCollection) {
         StickyHeadersLayout *layout = [[StickyHeadersLayout alloc]init];
         layout.itemSize = CGSizeMake(100, 100);
-        layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 40);
+        layout.headerReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 45);
         _myCollection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         _myCollection.backgroundColor = [UIColor groupTableViewBackgroundColor];
         [_myCollection registerClass:[NormalCell class] forCellWithReuseIdentifier:@"NormalCell"];

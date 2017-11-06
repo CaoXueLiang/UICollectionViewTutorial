@@ -17,6 +17,8 @@
 		588FD9BB1FB0510300FD8F87 /* StickyHeadersLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 588FD9BA1FB0510300FD8F87 /* StickyHeadersLayout.m */; };
 		588FD9BE1FB0554100FD8F87 /* NormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 588FD9BD1FB0554100FD8F87 /* NormalCell.m */; };
 		588FD9C11FB0558800FD8F87 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 588FD9C01FB0558800FD8F87 /* HeaderView.m */; };
+		C3EA8F721FB0A2F200D291F0 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA8F701FB0A2D600D291F0 /* YYClassInfo.m */; };
+		C3EA8F731FB0A2FB00D291F0 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA8F6E1FB0A2D600D291F0 /* NSObject+YYModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,11 @@
 		588FD9BD1FB0554100FD8F87 /* NormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalCell.m; sourceTree = "<group>"; };
 		588FD9BF1FB0558800FD8F87 /* HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		588FD9C01FB0558800FD8F87 /* HeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		C3EA8F6D1FB0A2D600D291F0 /* NSObject+YYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		C3EA8F6E1FB0A2D600D291F0 /* NSObject+YYModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		C3EA8F6F1FB0A2D600D291F0 /* YYClassInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		C3EA8F701FB0A2D600D291F0 /* YYClassInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		C3EA8F711FB0A2D600D291F0 /* YYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +115,7 @@
 		588FD9841FB0508600FD8F87 /* StickyHeadersLayout */ = {
 			isa = PBXGroup;
 			children = (
+				C3EA8F6C1FB0A2D600D291F0 /* YYModel */,
 				588FD9B81FB050C800FD8F87 /* Layout */,
 				588FD9B71FB050BF00FD8F87 /* Class */,
 				588FD9851FB0508600FD8F87 /* AppDelegate.h */,
@@ -158,6 +166,18 @@
 				588FD9BA1FB0510300FD8F87 /* StickyHeadersLayout.m */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		C3EA8F6C1FB0A2D600D291F0 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA8F6D1FB0A2D600D291F0 /* NSObject+YYModel.h */,
+				C3EA8F6E1FB0A2D600D291F0 /* NSObject+YYModel.m */,
+				C3EA8F6F1FB0A2D600D291F0 /* YYClassInfo.h */,
+				C3EA8F701FB0A2D600D291F0 /* YYClassInfo.m */,
+				C3EA8F711FB0A2D600D291F0 /* YYModel.h */,
+			);
+			path = YYModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EA8F731FB0A2FB00D291F0 /* NSObject+YYModel.m in Sources */,
+				C3EA8F721FB0A2F200D291F0 /* YYClassInfo.m in Sources */,
 				588FD98A1FB0508600FD8F87 /* ViewController.m in Sources */,
 				588FD9C11FB0558800FD8F87 /* HeaderView.m in Sources */,
 				588FD9BE1FB0554100FD8F87 /* NormalCell.m in Sources */,
