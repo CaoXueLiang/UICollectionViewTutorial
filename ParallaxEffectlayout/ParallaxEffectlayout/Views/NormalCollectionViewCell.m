@@ -37,8 +37,8 @@
         make.right.equalTo(self.contentView).offset(40);
     }];
     
-    CGFloat width = [UIScreen mainScreen].bounds.size.width + 80;
-    CGFloat imageHeight = width *tanf(M_PI *(14/180.0)) + 130 / cosf(14/180.0);
+    CGFloat width = [UIScreen mainScreen].bounds.size.width + 130;
+    CGFloat imageHeight = width *tanf(M_PI *(14/180.0)) + 130.0 / cosf(14/180.0);
     [self.containerview addSubview:self.backImageView];
     [self.backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.containerview.mas_centerY).offset(0);

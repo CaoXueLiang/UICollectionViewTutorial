@@ -49,7 +49,7 @@
 - (UICollectionView *)myCollection{
     if (!_myCollection) {
         ParallaxEffectlayout *layout = [[ParallaxEffectlayout alloc]init];
-        layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 130);
+        layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 110);
         layout.minimumLineSpacing = 13;
         _myCollection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         [_myCollection registerClass:[NormalCollectionViewCell class] forCellWithReuseIdentifier:@"NormalCollectionViewCell"];
