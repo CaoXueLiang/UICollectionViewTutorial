@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		582DCF481FB15FD900D40700 /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 582DCF471FB15FD900D40700 /* Inspirations.plist */; };
 		583E71531FA9D20600356C6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E71521FA9D20600356C6C /* AppDelegate.m */; };
 		583E71561FA9D20600356C6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E71551FA9D20600356C6C /* ViewController.m */; };
 		583E715B1FA9D20700356C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 583E715A1FA9D20700356C6C /* Assets.xcassets */; };
@@ -17,7 +18,6 @@
 		589FC7CA1FAAED6E00EFBE6D /* InspirationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FC7C91FAAED6E00EFBE6D /* InspirationCell.m */; };
 		589FC7CD1FAAEE1B00EFBE6D /* InspirationLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FC7CC1FAAEE1B00EFBE6D /* InspirationLayout.m */; };
 		589FC7D21FAAF04900EFBE6D /* InspirationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FC7D11FAAF04900EFBE6D /* InspirationModel.m */; };
-		589FC7D41FAB0FC400EFBE6D /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 589FC7D31FAB0FC400EFBE6D /* Inspirations.plist */; };
 		58D60E9C1FAC7395003C53CB /* UIImage+Decompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D60E9B1FAC7395003C53CB /* UIImage+Decompression.m */; };
 		7802CBE92C887A337782CBC9 /* libPods-ParallaxCustomLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BCB06AE2858CA0711F4EE87 /* libPods-ParallaxCustomLayout.a */; };
 /* End PBXBuildFile section */
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		582DCF471FB15FD900D40700 /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
 		583E714E1FA9D20600356C6C /* ParallaxCustomLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxCustomLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		583E71511FA9D20600356C6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		583E71521FA9D20600356C6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		589FC7CC1FAAEE1B00EFBE6D /* InspirationLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InspirationLayout.m; sourceTree = "<group>"; };
 		589FC7D01FAAF04900EFBE6D /* InspirationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InspirationModel.h; sourceTree = "<group>"; };
 		589FC7D11FAAF04900EFBE6D /* InspirationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InspirationModel.m; sourceTree = "<group>"; };
-		589FC7D31FAB0FC400EFBE6D /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
 		58D60E9A1FAC7395003C53CB /* UIImage+Decompression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Decompression.h"; sourceTree = "<group>"; };
 		58D60E9B1FAC7395003C53CB /* UIImage+Decompression.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Decompression.m"; sourceTree = "<group>"; };
 		7BCB06AE2858CA0711F4EE87 /* libPods-ParallaxCustomLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParallaxCustomLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +128,7 @@
 		583E71501FA9D20600356C6C /* ParallaxCustomLayout */ = {
 			isa = PBXGroup;
 			children = (
-				589FC7D31FAB0FC400EFBE6D /* Inspirations.plist */,
+				582DCF471FB15FD900D40700 /* Inspirations.plist */,
 				58D60E991FAC735D003C53CB /* Helper */,
 				589FC7CF1FAAF02400EFBE6D /* Model */,
 				583E71831FA9D2C700356C6C /* Class */,
@@ -311,7 +311,7 @@
 			files = (
 				583E715E1FA9D20700356C6C /* LaunchScreen.storyboard in Resources */,
 				583E715B1FA9D20700356C6C /* Assets.xcassets in Resources */,
-				589FC7D41FAB0FC400EFBE6D /* Inspirations.plist in Resources */,
+				582DCF481FB15FD900D40700 /* Inspirations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
