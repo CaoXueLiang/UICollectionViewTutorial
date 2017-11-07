@@ -17,10 +17,7 @@
     
     CGFloat angle = M_PI *(-14/180.0);
     for (UICollectionViewLayoutAttributes *attributes in layoutArray) {
-        /*将宽度减小24*/
-        CGRect frame = CGRectInset(attributes.frame, 12, 0);
-        attributes.frame = frame;
-        
+
         /*cell按逆时针旋转14°*/
         attributes.transform = CGAffineTransformMakeRotation(angle);
     }

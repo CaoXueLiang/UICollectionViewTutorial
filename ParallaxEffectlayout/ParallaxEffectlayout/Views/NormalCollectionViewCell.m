@@ -37,13 +37,10 @@
         make.right.equalTo(self.contentView).offset(40);
     }];
     
-    CGFloat width = [UIScreen mainScreen].bounds.size.width + 130;
-    CGFloat imageHeight = width *tanf(M_PI *(14/180.0)) + 130.0 / cosf(14/180.0);
     [self.containerview addSubview:self.backImageView];
     [self.backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.containerview.mas_centerY).offset(0);
         make.left.right.equalTo(self.containerview);
-        make.height.mas_equalTo(imageHeight);
     }];
     
     [self.containerview addSubview:self.coverView];
@@ -98,19 +95,19 @@
     CGRect bounds = collectionBounds;
     CGPoint boundsCenter = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds));
     CGPoint cellCenter = self.center;
-    
+
     //找出每个cell相对于 collectionView 中心点的偏移量
     CGPoint offsetFromCenter = CGPointMake(boundsCenter.x - cellCenter.x, boundsCenter.y - cellCenter.y);
-    
+
     //cell 的最大偏移量
-    CGSize cellSize = collectionBounds.size;
-    
+    CGSize cellSize = self.bounds.size;
+
     /*offsetFromCenter.y 表示偏离中心点的距离。这就意味 collectionView 滚动一段距离，离中心点越远的 cell 对应的 parallaxOffset 的值就越大，离中心点越近的 cell 对应的 parallaxOffset 值就越小*/
     CGFloat maxVerticalOffsetWhereCellIsStillVisible = (bounds.size.height / 2) + (cellSize.height / 2);
-    CGFloat scaleFactor = 50.0 / maxVerticalOffsetWhereCellIsStillVisible;
-    
+    CGFloat scaleFactor = 40.0 / maxVerticalOffsetWhereCellIsStillVisible;
+
     CGPoint parallaxOffset = CGPointMake(0.0, offsetFromCenter.y * scaleFactor);
-    
+
     [self.backImageView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.containerview.mas_centerY).offset(parallaxOffset.y);
     }];
@@ -140,6 +137,7 @@
 - (UIImageView *)backImageView{
     if (!_backImageView) {
         _backImageView = [[UIImageView alloc]init];
+        _backImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _backImageView;
 }
