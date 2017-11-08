@@ -36,7 +36,8 @@
     /*一共有多少iterm*/
     NSInteger numberOfIterms = [self.collectionView numberOfItemsInSection:0];
     /*求显示有多少页*/
-    self.numberOfPages = ceil(numberOfIterms / self.numberOfItemsInPage);
+    CGFloat itermsInPage = [[NSString stringWithFormat:@"%ld",self.numberOfItemsInPage] floatValue];
+    self.numberOfPages = ceil(numberOfIterms / itermsInPage);
     
     for (int i = 0; i < numberOfIterms; i++) {
         NSIndexPath *path = [NSIndexPath indexPathForItem:i inSection:0];

@@ -51,7 +51,7 @@
         CGFloat width = CGRectGetWidth(self.view.bounds);
         PageScrollowLayout *layout = [[PageScrollowLayout alloc]init];
         layout.itemSize = CGSizeMake((width - 4*3)/4.0, 100);
-        layout.numberOfItemsInPage = 8.0;
+        layout.numberOfItemsInPage = 8;
         layout.columnsInPage = 4;
         layout.minimumInteritemSpacing = 4;
         layout.minimumLineSpacing = 4;

@@ -12,7 +12,7 @@
 /*每页缩进*/
 @property (nonatomic,assign) UIEdgeInsets pageInset;
 /*每页iterm的个数*/
-@property (nonatomic,assign) CGFloat numberOfItemsInPage;
+@property (nonatomic,assign) NSUInteger numberOfItemsInPage;
 /*每页有多少列*/
 @property (nonatomic,assign) NSUInteger columnsInPage;
 @end
