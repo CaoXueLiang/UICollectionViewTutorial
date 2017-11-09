@@ -25,7 +25,7 @@
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 40;
+    return 20;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -38,6 +38,7 @@
 - (UICollectionView *)myCollection{
     if (!_myCollection) {
         LineLayout *layout = [[LineLayout alloc]init];
+        layout.sectionInset = UIEdgeInsetsMake(100, CGRectGetWidth(self.view.bounds)/2.0 - 150/2.0, 100, CGRectGetWidth(self.view.bounds)/2.0 - 150/2.0);
         _myCollection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
         [_myCollection registerClass:[LineCollectionViewCell class] forCellWithReuseIdentifier:@"LineCollectionViewCell"];
         _myCollection.dataSource = self;
