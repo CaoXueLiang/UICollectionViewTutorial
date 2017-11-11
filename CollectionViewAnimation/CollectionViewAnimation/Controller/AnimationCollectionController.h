@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AnimationCollectionController : UIViewController
-
+@property (nonatomic,strong) UICollectionView *myCollection;
 @end

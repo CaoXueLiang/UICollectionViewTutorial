@@ -12,7 +12,6 @@
 #import <Masonry/Masonry.h>
 
 @interface DetailViewController ()<UICollectionViewDataSource>
-@property (nonatomic,strong) UICollectionView *myCollection;
 /*当前的iterm的个数*/
 @property (nonatomic,assign) NSInteger currentItermCount;
 /*当前选中的iterm的颜色*/
@@ -63,6 +62,7 @@
 - (UICollectionView *)myCollection{
     if (!_myCollection) {
         AnimationEditeLayout *layout = [[AnimationEditeLayout alloc]init];
+        layout.itemSize = CGSizeMake(200, 200);
         _myCollection = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
         [_myCollection registerClass:[NormalCollectionViewCell class] forCellWithReuseIdentifier:@"NormalCollectionViewCell"];
         _myCollection.dataSource = self;

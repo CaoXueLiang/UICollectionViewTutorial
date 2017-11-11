@@ -33,7 +33,7 @@
 
 #pragma mark - OverVide Menthod
 - (NSArray*)layoutAttributesForElementsInRect:(CGRect)rect{
-    NSMutableArray *attributesArray = [[super layoutAttributesForElementsInRect:rect] mutableCopy];
+    NSMutableArray *attributesArray = [[NSMutableArray alloc]initWithArray:[super layoutAttributesForElementsInRect:rect] copyItems:YES];
     if (self.pinchedItem) {
         UICollectionViewLayoutAttributes *attr = [[attributesArray filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"indexPath == %@", self.pinchedItem]] firstObject];
         attr.size = self.pinchedItemSize;

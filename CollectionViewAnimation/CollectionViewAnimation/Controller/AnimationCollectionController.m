@@ -13,7 +13,6 @@
 #import "DetailViewController.h"
 
 @interface AnimationCollectionController ()<UICollectionViewDataSource,UICollectionViewDelegate>
-@property (nonatomic,strong) UICollectionView *myCollection;
 @property (nonatomic,assign) BOOL isBigLayout;
 /*section个数*/
 @property (nonatomic,assign) NSInteger sectionCount;

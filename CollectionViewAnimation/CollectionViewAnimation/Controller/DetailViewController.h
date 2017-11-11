@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
+@property (nonatomic,strong) UICollectionView *myCollection;
 + (instancetype)initWithItermCount:(NSInteger)count color:(UIColor*)color selectedIterm:(NSIndexPath *)indexPath;
 @end
