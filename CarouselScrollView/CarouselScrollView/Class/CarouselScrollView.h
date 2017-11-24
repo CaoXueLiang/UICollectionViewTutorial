@@ -22,5 +22,4 @@
 @property (nonatomic,assign) BOOL isAutoScroll;
 /**网络图片地址数组 或 本地图片数组*/
 @property (nonatomic,strong) NSArray *imageArray;
-
 @end

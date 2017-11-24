@@ -14,7 +14,6 @@
 @property (nonatomic,strong) UICollectionView *myCollection;
 @property (nonatomic,strong) UIPageControl *pageControl;
 @property (nonatomic,strong) UICollectionViewFlowLayout *flowLayout;
-@property (nonatomic,assign) NSInteger totalItermCount;
 @end
 
 @implementation CarouselScrollView
@@ -78,6 +77,9 @@
 
 - (void)setIsinFiniteLoop:(BOOL)isinFiniteLoop{
     _isinFiniteLoop = isinFiniteLoop;
+    if (self.imageArray) {
+       self.imageArray = self.imageArray;
+    }
 }
 
 - (void)setIsAutoScroll:(BOOL)isAutoScroll{
@@ -94,7 +96,6 @@
     }
     _imageArray = imageArray;
     _pageControl.numberOfPages = _imageArray.count;
-    _totalItermCount = self.isAutoScroll ? _imageArray.count * 100 : _imageArray.count;
     if (_imageArray.count > 1) {
         _myCollection.scrollEnabled = YES;
         [self setIsAutoScroll:_isAutoScroll];
@@ -104,33 +105,20 @@
     }
     [_myCollection reloadData];
     
-    if (_myCollection.contentOffset.x == 0 && _totalItermCount) {
-        int targetIndex = 0;
-        if (self.isAutoScroll) {
-            targetIndex = _totalItermCount * 0.5;
-        }else{
-            targetIndex = 0;
-        }
-        [_myCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    if (_isinFiniteLoop && _imageArray.count > 1) {
+       [_myCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     }
 }
 
 #pragma mark - Private Menthod
 - (void)automaticScroll{
-    if (_totalItermCount == 0) return;
+    if (_imageArray.count == 0) return;
     int currentIndex = [self currentIndex];
     int targetIndex = currentIndex + 1;
     [self scrollToIndex:targetIndex];
 }
 
 - (void)scrollToIndex:(int)targetIndex{
-    if (targetIndex >= _totalItermCount) {
-        if (self.isAutoScroll) {
-            targetIndex = _totalItermCount * 0.5;
-            [_myCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
-        }
-        return;
-    }
     [_myCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }
 
@@ -147,18 +135,36 @@
     return MAX(0, index);
 }
 
-- (NSInteger)pageControlIndexWithCurrentCellIndex:(NSInteger)index{
-    return index % self.imageArray.count;
+/**根据当前cell的indexPath，获取当前cell数据源的索引*/
+- (NSInteger)dataSourceIndexForCurrentIndex:(NSInteger)index{
+    NSInteger dataIndex = 0;
+    if (self.isinFiniteLoop && self.imageArray.count > 1) {
+        if (index == 0) {
+            dataIndex = self.imageArray.count - 1;
+        }else if (index == self.imageArray.count + 1){
+            dataIndex = 0;
+        }else{
+            dataIndex = index - 1;
+        }
+    }else{
+        dataIndex = index;
+    }
+    return dataIndex;
 }
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return _totalItermCount;
+    /**只有是无限循环和数组个数大于1时，才能无限循环*/
+    if (self.isinFiniteLoop && self.imageArray.count > 1) {
+        return self.imageArray.count + 2;
+    }else{
+        return self.imageArray.count;
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageCollectionViewCell" forIndexPath:indexPath];
-    NSInteger  currentIndex = [self pageControlIndexWithCurrentCellIndex:indexPath.item];
+    NSInteger  currentIndex = [self dataSourceIndexForCurrentIndex:indexPath.item];
     if ([self.imageArray[currentIndex] isKindOfClass:[UIImage class]]) {
         cell.image = self.imageArray[currentIndex];
     }else if ([self.imageArray[currentIndex] isKindOfClass:[NSString class]]){
@@ -170,13 +176,13 @@
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if ([self.delegate respondsToSelector:@selector(didSelectedIndex:)]) {
-        [self.delegate didSelectedIndex:[self pageControlIndexWithCurrentCellIndex:indexPath.item]];
+        [self.delegate didSelectedIndex:[self dataSourceIndexForCurrentIndex:indexPath.item]];
     }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     NSInteger currentIndex = [self currentIndex];
-    _pageControl.currentPage = [self pageControlIndexWithCurrentCellIndex:currentIndex];
+    _pageControl.currentPage = [self dataSourceIndexForCurrentIndex:currentIndex];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -188,6 +194,21 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if (self.isAutoScroll) {
         [self _initTimer];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    NSInteger currentIndex = [self currentIndex];
+    if (self.isinFiniteLoop && self.imageArray.count > 1) {
+        if (currentIndex == 0) {
+            [_myCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.imageArray.count inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        }else if (currentIndex == self.imageArray.count + 1){
+           [_myCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        }
     }
 }
 

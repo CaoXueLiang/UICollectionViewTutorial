@@ -27,6 +27,7 @@
     _horScrollView = [[CarouselScrollView alloc]initWithFrame:CGRectMake(0, 100, CGRectGetWidth(self.view.bounds), 200)];
     _horScrollView.imageArray = urlArray;
     _horScrollView.delegate = self;
+    //_horScrollView.isinFiniteLoop = NO;
     [self.view addSubview:_horScrollView];
     
 }
