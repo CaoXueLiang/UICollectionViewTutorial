@@ -20,6 +20,6 @@
 @property (nonatomic,assign) BOOL isinFiniteLoop;
 /**是否自动滚动，默认是YES*/
 @property (nonatomic,assign) BOOL isAutoScroll;
-/**网络图片地址数组 或 本地图片数组*/
-@property (nonatomic,strong) NSArray *imageArray;
+/**为图片数组赋值*/
+- (void)setImageArray:(NSArray *)imageArray;
 @end

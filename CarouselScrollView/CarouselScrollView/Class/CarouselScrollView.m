@@ -14,6 +14,8 @@
 @property (nonatomic,strong) UICollectionView *myCollection;
 @property (nonatomic,strong) UIPageControl *pageControl;
 @property (nonatomic,strong) UICollectionViewFlowLayout *flowLayout;
+/**网络图片地址数组 或 本地图片数组*/
+@property (nonatomic,strong) NSArray *imageArray;
 @end
 
 @implementation CarouselScrollView
@@ -73,13 +75,12 @@
 #pragma mark - Setter Menthod
 - (void)setDirection:(UICollectionViewScrollDirection)direction{
     _flowLayout.scrollDirection = direction;
+    [self setImageArray:_imageArray];
 }
 
 - (void)setIsinFiniteLoop:(BOOL)isinFiniteLoop{
     _isinFiniteLoop = isinFiniteLoop;
-    if (self.imageArray) {
-       self.imageArray = self.imageArray;
-    }
+    [self setImageArray:_imageArray];
 }
 
 - (void)setIsAutoScroll:(BOOL)isAutoScroll{
@@ -94,6 +95,7 @@
     if (!imageArray || imageArray.count == 0) {
         return;
     }
+    _imageArray = nil;
     _imageArray = imageArray;
     _pageControl.numberOfPages = _imageArray.count;
     if (_imageArray.count > 1) {
@@ -115,10 +117,6 @@
     if (_imageArray.count == 0) return;
     int currentIndex = [self currentIndex];
     int targetIndex = currentIndex + 1;
-    [self scrollToIndex:targetIndex];
-}
-
-- (void)scrollToIndex:(int)targetIndex{
     [_myCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }
 
